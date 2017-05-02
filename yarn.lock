@@ -30,6 +30,10 @@
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/@angular/http/-/http-4.0.3.tgz#efbb701a215ec7704c021676484b85ed47392f4b"
 
+"@angular/material@^2.0.0-beta.3":
+  version "2.0.0-beta.3"
+  resolved "https://registry.yarnpkg.com/@angular/material/-/material-2.0.0-beta.3.tgz#ec31dee61d7300ece28fee476852db236ded1e13"
+
 "@angular/platform-browser-dynamic@~4.0.0":
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/@angular/platform-browser-dynamic/-/platform-browser-dynamic-4.0.3.tgz#5fa3b98f725999b631d7d7174e6e43dcbf6aa9ac"
@@ -549,6 +553,12 @@ clean-css@4.0.x:
   resolved "https://registry.yarnpkg.com/clean-css/-/clean-css-4.0.12.tgz#a02e61707f1840bd3338f54dbc9acbda4e772fa3"
   dependencies:
     source-map "0.5.x"
+
+clean-webpack-plugin@^0.1.16:
+  version "0.1.16"
+  resolved "https://registry.yarnpkg.com/clean-webpack-plugin/-/clean-webpack-plugin-0.1.16.tgz#422a8e150bf3d5abfd3d14bfacb070e80fb2e23f"
+  dependencies:
+    rimraf "~2.5.1"
 
 cliui@^2.1.0:
   version "2.1.0"
@@ -2757,6 +2767,12 @@ rimraf@2, rimraf@^2.5.1, rimraf@^2.6.1:
   dependencies:
     glob "^7.0.5"
 
+rimraf@~2.5.1:
+  version "2.5.4"
+  resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.5.4.tgz#96800093cbf1a0c86bd95b4625467535c29dfa04"
+  dependencies:
+    glob "^7.0.5"
+
 ripemd160@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/ripemd160/-/ripemd160-1.0.1.tgz#93a4bbd4942bc574b69a8fa57c71de10ecca7d6e"
@@ -3302,6 +3318,10 @@ wbuf@^1.1.0, wbuf@^1.4.0:
   resolved "https://registry.yarnpkg.com/wbuf/-/wbuf-1.7.2.tgz#d697b99f1f59512df2751be42769c1580b5801fe"
   dependencies:
     minimalistic-assert "^1.0.0"
+
+webpack-chunk-hash@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/webpack-chunk-hash/-/webpack-chunk-hash-0.4.0.tgz#6b40c3070fbc9ff0cfe0fe781c7174af6c7c16a4"
 
 webpack-dev-middleware@^1.10.2:
   version "1.10.2"
