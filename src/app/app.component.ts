@@ -1,3 +1,4 @@
+import './app.component.sass'
 import { Component } from '@angular/core';
 
 @Component({
