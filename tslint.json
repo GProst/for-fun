@@ -1,10 +1,18 @@
 {
   "extends": "tslint:recommended",
+  "defaultSeverity": "warning",
   "rules": {
     "trailing-comma": false,
     "member-access": false,
-    "quotemark": [true, "single", "avoid-escape"],
-    "semicolon": [true, "never"],
+    "quotemark": [
+      true,
+      "single",
+      "avoid-escape"
+    ],
+    "semicolon": [
+      true,
+      "never"
+    ],
     "no-unused-variable": true,
     "no-unused-expression": true
   }

@@ -1,4 +1,4 @@
-import {NgModule}      from '@angular/core'
+import {NgModule} from '@angular/core'
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 import {MdToolbarModule, MdButtonModule} from '@angular/material'
 

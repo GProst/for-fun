@@ -4,9 +4,9 @@
   "description": "German Prostakov blog",
   "scripts": {
     "start": "cd src && webpack-dev-server --progress",
-    "lint": "tslint ./src/**/*.ts -t verbose"
+    "lint": "tslint -c ./tslint.json ./src/**/*.ts -t verbose --type-check --project ./src/tsconfig.json"
   },
-  "pre-commit": "lint",
+  "pre-commit": ["lint"],
   "keywords": [],
   "author": "GProst aka German Prostakov <gprostmail@gmail.com>",
   "license": "MIT",
