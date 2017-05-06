@@ -4,6 +4,7 @@ const webpack = require("webpack");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackChunkHash = require("webpack-chunk-hash");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require("path");
 
 
@@ -30,11 +31,28 @@ module.exports = function getConfig() {
         {
           test: /\.html/,
           use: ['html-loader']
+        },
+        {
+          test: /\.sass/,
+          use: ExtractTextPlugin.extract({
+            use: [
+              {
+                loader: 'css-loader',
+                options: {
+                  sourceMap: true
+                }
+              },
+              'sass-loader'
+            ],
+            fallback: 'style-loader'
+          })
         }
       ]
     },
 
     plugins: [
+      new ExtractTextPlugin("styles.[contenthash].css"),
+
       new HtmlWebpackPlugin({
         template: './index.html',
         filename: 'index.html',
