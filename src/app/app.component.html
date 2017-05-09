@@ -1,3 +1,8 @@
-<header>Header</header>
+<header>
+    <md-tab-group (selectChange)="onTabClick($event)">
+        <md-tab label="Posts"></md-tab>
+        <md-tab label="About"></md-tab>
+    </md-tab-group>
+</header>
 <router-outlet></router-outlet>
 <footer>Footer</footer>
