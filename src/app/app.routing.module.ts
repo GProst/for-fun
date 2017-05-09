@@ -1,8 +1,8 @@
 import {NgModule} from '@angular/core'
 import {RouterModule, Routes} from '@angular/router'
 
-import PostsPage from '../view/pages/Posts/component'
-import AboutPage from '../view/pages/About/component'
+import PostsPage from './view/pages/Posts/component'
+import AboutPage from './view/pages/About/component'
 
 const appRoutes: Routes = [
   {path: 'posts', component: PostsPage},
