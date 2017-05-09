@@ -6,7 +6,9 @@
     "start": "cd src && webpack-dev-server --progress",
     "lint": "tslint -c ./tslint.json ./src/**/*.ts -t verbose --type-check --project ./src/tsconfig.json"
   },
-  "pre-commit": ["lint"],
+  "pre-commit": [
+    "lint"
+  ],
   "keywords": [],
   "author": "GProst aka German Prostakov <gprostmail@gmail.com>",
   "license": "MIT",
@@ -25,8 +27,10 @@
     "@angular/router": "~4.0.0",
     "@angular/tsc-wrapped": "~4.0.0",
     "@angular/upgrade": "~4.0.0",
+    "@types/lodash-es": "^4.14.5",
     "angular-in-memory-web-api": "~0.3.1",
     "core-js": "^2.4.1",
+    "lodash-es": "^4.17.4",
     "normalize.css": "^7.0.0",
     "rxjs": "5.0.1",
     "zone.js": "^0.8.4"
