@@ -1,8 +1,11 @@
-<header>
-    <md-tab-group (selectChange)="onTabClick($event)">
-        <md-tab label="Posts"></md-tab>
-        <md-tab label="About"></md-tab>
+<div class="app-container">
+  <header>
+    <md-tab-group [selectedIndex]="getActiveTabIndx()" (selectChange)="onTabClick($event)">
+      <md-tab *ngFor="let tab of tabs" [label]="tab.label"></md-tab>
     </md-tab-group>
-</header>
-<router-outlet></router-outlet>
-<footer>Footer</footer>
+  </header>
+  <main class="main">
+    <router-outlet></router-outlet>
+  </main>
+  <footer class="footer">Footer</footer>
+</div>
