@@ -5,4 +5,4 @@ import './app.component.sass'
   selector: 'gp-app',
   template: require('./app.component.html')
 })
-export class AppComponent {name = 'German'}
+export class AppComponent {}
