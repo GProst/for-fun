@@ -14,6 +14,8 @@
       "never"
     ],
     "no-unused-variable": true,
-    "no-unused-expression": true
+    "no-unused-expression": true,
+    "object-literal-sort-keys": false,
+    "no-console": false
   }
 }
