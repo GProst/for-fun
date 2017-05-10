@@ -32,7 +32,12 @@ const config = {
         use: ['html-loader']
       },
       {
+        test: /component\.sass/,
+        use: ['raw-loader', 'sass-loader']
+      },
+      {
         test: /\.sass/,
+        exclude: /component\.sass/,
         use: ExtractTextPlugin.extract({
           use: [
             {

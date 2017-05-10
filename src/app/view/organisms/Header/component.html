@@ -1,0 +1,13 @@
+<md-toolbar color="primary">
+  <button md-icon-button class="test"></button>
+  <div>
+    <button
+      md-raised-button
+      *ngFor="let tab of tabs"
+      color="accent"
+      (click)="onBtnClick(tab.path)"
+    >
+      {{tab.label}}
+    </button>
+  </div>
+</md-toolbar>

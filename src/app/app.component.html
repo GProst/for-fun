@@ -1,9 +1,5 @@
 <div class="app-container">
-  <header>
-    <md-tab-group [selectedIndex]="getActiveTabIndx()" (selectChange)="onTabClick($event)">
-      <md-tab *ngFor="let tab of tabs" [label]="tab.label"></md-tab>
-    </md-tab-group>
-  </header>
+  <gp-header></gp-header>
   <main class="main">
     <router-outlet></router-outlet>
   </main>
