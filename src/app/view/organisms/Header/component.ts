@@ -1,14 +1,12 @@
 import {Component} from '@angular/core'
 import {Router} from '@angular/router'
-import _isUndefined from 'lodash-es/isUndefined'
-
-import {MdTabChangeEvent} from '@angular/material'
 
 import headerContent from '../../../model/header' // TODO: service
 
 @Component({
   selector: 'gp-header',
-  template: require('./component.html')
+  template: require('./component.html'),
+  styleUrls: ['./component.sass']
 })
 export default class HeaderOrganism {
   tabs = headerContent.tabs
@@ -17,16 +15,7 @@ export default class HeaderOrganism {
     private router: Router
   ) {}
 
-  getActiveTabIndx() {
-    return this.tabs.findIndex(tab => tab.path === this.router.url)
-  }
-
-  onTabClick($event: MdTabChangeEvent) {
-    const activeTab = this.tabs.find(tab => tab.label === $event.tab.textLabel)
-    if (_isUndefined(activeTab)) {
-      throw new Error(`no such label in tabs list: ${$event.tab.textLabel}`)
-    }
-    const {path} = activeTab
+  onBtnClick(path: string) {
     this.router.navigate([path])
   }
 }
