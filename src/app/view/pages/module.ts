@@ -7,6 +7,7 @@ import TemplatesModule from '../templates/module'
 
 @NgModule({
   declarations: [PostsPage, AboutPage],
-  imports: [TemplatesModule]
+  imports: [TemplatesModule],
+  exports: [TemplatesModule]
 })
 export default class PagesModule {}
