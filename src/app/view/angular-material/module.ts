@@ -1,9 +1,11 @@
 import {NgModule} from '@angular/core'
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
-import {MdToolbarModule, MdButtonModule} from '@angular/material'
+import {MdToolbarModule, MdButtonModule, MdTooltipModule} from '@angular/material'
+
+import './index.sass'
 
 @NgModule({
-  exports:  [BrowserAnimationsModule, MdToolbarModule, MdButtonModule],
-  imports:  [BrowserAnimationsModule, MdToolbarModule, MdButtonModule]
+  exports:  [BrowserAnimationsModule, MdToolbarModule, MdButtonModule, MdTooltipModule],
+  imports:  [BrowserAnimationsModule, MdToolbarModule, MdButtonModule, MdTooltipModule]
 })
 export class AngularMaterialModule {}

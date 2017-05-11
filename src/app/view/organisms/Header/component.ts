@@ -1,5 +1,6 @@
-import {Component} from '@angular/core'
+import {Component, ViewChild} from '@angular/core'
 import {Router} from '@angular/router'
+import {MdTooltip} from '@angular/material'
 
 import headerContent from '../../../model/header' // TODO: service
 
@@ -9,6 +10,8 @@ import headerContent from '../../../model/header' // TODO: service
   styleUrls: ['./component.sass']
 })
 export default class HeaderOrganism {
+  @ViewChild(MdTooltip) tooltip: MdTooltip
+
   tabs = headerContent.tabs
 
   constructor(
@@ -17,5 +20,9 @@ export default class HeaderOrganism {
 
   onBtnClick(path: string) {
     this.router.navigate([path])
+  }
+
+  onAvatarTouch () {
+    this.tooltip.show(0)
   }
 }

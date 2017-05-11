@@ -1,13 +1,18 @@
 <md-toolbar color="primary">
-  <button md-icon-button class="test"></button>
-  <div>
-    <button
-      md-raised-button
-      *ngFor="let tab of tabs"
-      color="accent"
-      (click)="onBtnClick(tab.path)"
-    >
-      {{tab.label}}
+  <div class="toolbar-row">
+    <button (touchend)="onAvatarTouch()" class="avatar-btn" mdTooltipPosition="right" md-icon-button mdTooltip="Welcome friend!">
+      <!--TODO: change avatar-->
+      <img class="avatar" src="https://avatars3.githubusercontent.com/u/18051055?v=3&u=93ee4b5075055e0f86a3cc8fa0141a46727ceca8&s=400" />
     </button>
+    <div class="tabs-container">
+      <button
+        md-raised-button
+        *ngFor="let tab of tabs"
+        color="accent"
+        (click)="onBtnClick(tab.path)"
+      >
+        {{tab.label}}
+      </button>
+    </div>
   </div>
 </md-toolbar>
