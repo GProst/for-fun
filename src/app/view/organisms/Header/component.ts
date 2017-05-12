@@ -22,7 +22,8 @@ export default class HeaderOrganism {
     this.router.navigate([path])
   }
 
-  onAvatarTouch () {
+  onAvatarTouch (event: any) { // TODO: TouchEvent interface
+    event.preventDefault()
     this.tooltip.show(0)
   }
 }
