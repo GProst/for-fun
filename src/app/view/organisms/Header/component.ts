@@ -7,7 +7,7 @@ import headerContent from '../../../model/header' // TODO: service
 @Component({
   selector: 'gp-header',
   template: require('./component.html'),
-  styleUrls: ['./component.sass']
+  styles: [require('./component.scss')]
 })
 export default class HeaderOrganism {
   @ViewChild(MdTooltip) tooltip: MdTooltip
@@ -22,7 +22,8 @@ export default class HeaderOrganism {
     this.router.navigate([path])
   }
 
-  onAvatarTouch () {
+  onAvatarTouch (event: any) { // TODO: TouchEvent interface
+    event.preventDefault()
     this.tooltip.show(0)
   }
 }

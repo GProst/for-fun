@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core'
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 import {MdToolbarModule, MdButtonModule, MdTooltipModule} from '@angular/material'
 
-import './index.sass'
+import './index.scss'
 
 @NgModule({
   exports:  [BrowserAnimationsModule, MdToolbarModule, MdButtonModule, MdTooltipModule],
