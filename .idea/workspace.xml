@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="35a58a13-25b8-48c9-b4e6-a4444cadb730" name="Default" comment="Remove .idea/workspace.xml">
+    <list default="true" id="35a58a13-25b8-48c9-b4e6-a4444cadb730" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -413,7 +412,7 @@
       <workItem from="1494079117497" duration="9882000" />
       <workItem from="1494186317698" duration="23022000" />
       <workItem from="1494691929520" duration="4535000" />
-      <workItem from="1494764562256" duration="2460000" />
+      <workItem from="1494764562256" duration="2486000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize ng2 app with webpack2">
       <created>1493679236139</created>
@@ -695,11 +694,18 @@
       <option name="project" value="LOCAL" />
       <updated>1494767618435</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Remove .idea/workspace.xml">
+      <created>1494767723529</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1494767723529</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49767000" />
+    <option name="totallyTimeSpent" value="49793000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1128" extended-state="6" />
