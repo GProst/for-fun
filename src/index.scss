@@ -10,3 +10,13 @@ $gprostV1-app-accent:  mat-palette($mat-indigo, A200, A100, A400);
 $gprostV1-app-theme: mat-light-theme($gprostV1-app-primary, $gprostV1-app-accent);
 
 @include angular-material-theme($gprostV1-app-theme);
+
+
+// Global styles
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #636261;
+  line-height: 32px;
+  font-size: 19px;
+}
