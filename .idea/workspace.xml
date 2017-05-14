@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="35a58a13-25b8-48c9-b4e6-a4444cadb730" name="Default" comment="Update .idea">
+    <list default="true" id="35a58a13-25b8-48c9-b4e6-a4444cadb730" name="Default" comment="Add .idea/workspace.xml to .gitignore">
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,8 +20,8 @@
       <file leaf-file-name="index.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/view/angular-material/index.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-18">
-              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="76">
+              <caret line="4" column="2" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -31,9 +30,34 @@
       <file leaf-file-name="index.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-18">
+            <state relative-caret-position="0">
               <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="breakpoints.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/breakpoints.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="11" column="41" lean-forward="true" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="76">
+                <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="18" selection-end-column="67" />
+                <folding />
+              </first_editor>
+              <second_editor>
+                <js_state />
+              </second_editor>
             </state>
           </provider>
         </entry>
@@ -41,8 +65,8 @@
       <file leaf-file-name="component.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/view/organisms/Header/component.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+            <state relative-caret-position="285">
+              <caret line="15" column="33" lean-forward="true" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -53,41 +77,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="95">
               <caret line="5" column="4" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="342">
-                <caret line="18" column="36" lean-forward="false" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
-                <folding />
-              </first_editor>
-              <second_editor>
-                <js_state />
-              </second_editor>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="webpack.config.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/webpack.config.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="43" column="8" lean-forward="false" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="33" lean-forward="false" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -174,11 +163,12 @@
         <option value="$PROJECT_DIR$/src/app/view/angular-material/index.sass" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/app/view/organisms/Header/component.sass" />
-        <option value="$PROJECT_DIR$/src/app/view/angular-material/index.scss" />
         <option value="$PROJECT_DIR$/src/index.scss" />
         <option value="$PROJECT_DIR$/src/webpack.config.js" />
-        <option value="$PROJECT_DIR$/src/app/view/organisms/Header/component.scss" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/breakpoints.scss" />
+        <option value="$PROJECT_DIR$/src/app/view/organisms/Header/component.scss" />
+        <option value="$PROJECT_DIR$/src/app/view/angular-material/index.scss" />
       </list>
     </option>
   </component>
@@ -422,7 +412,7 @@
       <workItem from="1494079117497" duration="9882000" />
       <workItem from="1494186317698" duration="23022000" />
       <workItem from="1494691929520" duration="4535000" />
-      <workItem from="1494764562256" duration="1374000" />
+      <workItem from="1494764562256" duration="2353000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize ng2 app with webpack2">
       <created>1493679236139</created>
@@ -676,11 +666,32 @@
       <option name="project" value="LOCAL" />
       <updated>1494766447186</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Add .idea/workspace.xml to .gitignore">
+      <created>1494766526175</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1494766526175</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Move media breakpoint to scss variables">
+      <created>1494767427608</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1494767427608</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Update .idea">
+      <created>1494767443562</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1494767443562</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48681000" />
+    <option name="totallyTimeSpent" value="49660000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1128" extended-state="6" />
@@ -712,8 +723,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add Angular Material &amp; animations to the app" />
-    <MESSAGE value="Update webpack.config.js" />
     <MESSAGE value="Add angular-material module" />
     <MESSAGE value="Add angular-material button on the page&#10;&#10;For testing purpose" />
     <MESSAGE value="Add tslint checking before commit" />
@@ -736,6 +745,8 @@
     <MESSAGE value="Add JetBrains editor project settings" />
     <MESSAGE value="Test md table" />
     <MESSAGE value="Replace sass by scss&#10;&#10;+ some little changes on styles" />
+    <MESSAGE value="Add .idea/workspace.xml to .gitignore" />
+    <MESSAGE value="Move media breakpoint to scss variables" />
     <MESSAGE value="Update .idea" />
     <option name="LAST_COMMIT_MESSAGE" value="Update .idea" />
   </component>
@@ -744,13 +755,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/@angular/common/src/directives/ng_class.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="729">
-          <caret line="47" column="36" lean-forward="false" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main.js" />
     <entry file="file://$PROJECT_DIR$/index.html" />
     <entry file="file://$PROJECT_DIR$/dist/index.html" />
@@ -952,14 +956,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="33" lean-forward="false" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1083">
@@ -973,19 +969,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="342">
-            <caret line="18" column="36" lean-forward="false" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
-            <folding />
-          </first_editor>
-          <second_editor>
-            <js_state />
-          </second_editor>
         </state>
       </provider>
     </entry>
@@ -1007,22 +990,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-18">
-          <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/view/angular-material/index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-18">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/webpack.config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
@@ -1031,10 +998,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="33" lean-forward="false" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="76">
+            <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="18" selection-end-column="67" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/breakpoints.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="41" lean-forward="true" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/view/angular-material/index.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="2" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/view/organisms/Header/component.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        <state relative-caret-position="285">
+          <caret line="15" column="33" lean-forward="true" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
           <folding />
         </state>
       </provider>
