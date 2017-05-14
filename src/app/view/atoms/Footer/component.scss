@@ -1,0 +1,13 @@
+@import "../../../../sass-vars/breakpoints";
+@import "../../../../sass-vars/footer";
+
+:host {
+  z-index: 10;
+  height: $footer-height-xs;
+  box-shadow: 0 1px 6px 1px rgba(100, 100, 100, 0.3);
+  
+  @media #{$gt-xs} {
+    height: $footer-height-gt-xs;
+  }
+}
+

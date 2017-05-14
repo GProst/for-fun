@@ -1,12 +1,12 @@
 import {NgModule} from '@angular/core'
-import {AngularMaterialModule} from '../angular-material/module'
-import {BrowserModule} from '@angular/platform-browser'
+
+import MoleculesModule from '../molecules/module'
 
 import Header from './Header/component'
 
 @NgModule({
   declarations: [Header],
-  imports: [BrowserModule, AngularMaterialModule],
-  exports: [Header, AngularMaterialModule, BrowserModule]
+  imports: [MoleculesModule],
+  exports: [MoleculesModule, Header]
 })
 export default class OrganismsModule {}
