@@ -21,11 +21,11 @@
   }
 }
 
-$margin: 3rem;
+$margin: 4rem;
 .template-container {
   position: relative;
   max-width: 960px;
-  margin: 3rem auto;
+  margin: $margin auto;
   padding: 0 4rem;
   min-height: calc(100vh - #{$header-height-xs} - #{$footer-height-xs} - #{2 * $margin});
   
