@@ -8,6 +8,6 @@ import AboutTemplate from './About/component'
 @NgModule({
   imports: [OrganismsModule],
   declarations: [PostsTemplate, AboutTemplate],
-  exports: [OrganismsModule, PostsTemplate, AboutTemplate]
+  exports: [OrganismsModule]
 })
 export default class TemplatesModule {}

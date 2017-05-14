@@ -1,12 +1,12 @@
 import {NgModule} from '@angular/core'
 import {RouterModule, Routes} from '@angular/router'
 
-import PostsPage from './view/pages/Posts/component'
-import AboutPage from './view/pages/About/component'
+import PostsPageTemplate from './view/templates/Posts/component'
+import AboutPageTemplate from './view/templates/About/component'
 
 const appRoutes: Routes = [
-  {path: 'posts', component: PostsPage},
-  {path: 'about', component: AboutPage},
+  {path: 'posts', component: PostsPageTemplate},
+  {path: 'about', component: AboutPageTemplate},
   {path: '**', redirectTo: '/posts', pathMatch: 'full'}
 ]
 

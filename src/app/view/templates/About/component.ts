@@ -1,7 +1,13 @@
-import {Component} from '@angular/core'
+import {Component, HostBinding} from '@angular/core'
+
+import {slideFromToRight} from './animations'
 
 @Component({
-  selector: 'gp-about-template',
-  template: require('./component.html')
+  selector: 'gp-about-page',
+  template: require('./component.html'),
+  styles: [require('./component.scss')],
+  animations: [slideFromToRight]
 })
-export default class AboutTemplate {}
+export default class AboutTemplate {
+  @HostBinding('@routeAnimation') routeAnimation = true
+}

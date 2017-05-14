@@ -1,12 +1,22 @@
-@import "../../../../breakpoints";
+@import "../../../../sass-vars/breakpoints";
+@import "../../../../sass-vars/header";
+
+:host {
+  z-index: 10;
+  height: $header-height-xs;
+  
+  @media #{$gt-xs} {
+    height: $header-height-gt-xs;
+  }
+}
 
 .tabs-container {
-  width: 8.4rem;
+  width: 9.9rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  @media #{$sm} {
+  @media #{$gt-xs} {
     width: 11.4rem;
   }
 }
@@ -16,6 +26,8 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .avatar-btn {
@@ -26,7 +38,6 @@
   border-radius: 50%;
   outline: none;
   border: none;
-  cursor: pointer;
   padding: 0;
   margin: 0;
 }
