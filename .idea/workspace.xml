@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35a58a13-25b8-48c9-b4e6-a4444cadb730" name="Default" comment="Test md table">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/view/angular-material/index.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/view/organisms/Header/component.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/index.scss" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/view/angular-material/index.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/view/organisms/Header/component.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/index.sass" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/app.component.sass" afterPath="$PROJECT_DIR$/src/app/app.component.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/view/angular-material/module.ts" afterPath="$PROJECT_DIR$/src/app/view/angular-material/module.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/view/organisms/Header/component.html" afterPath="$PROJECT_DIR$/src/app/view/organisms/Header/component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/view/organisms/Header/component.ts" afterPath="$PROJECT_DIR$/src/app/view/organisms/Header/component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.ts" afterPath="$PROJECT_DIR$/src/main.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webpack.config.js" afterPath="$PROJECT_DIR$/src/webpack.config.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -52,8 +40,8 @@
       <file leaf-file-name="component.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/app/view/organisms/Header/component.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="28" column="12" lean-forward="true" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+            <state relative-caret-position="209">
+              <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -559,7 +547,7 @@
       <workItem from="1494079117497" duration="9882000" />
       <workItem from="1494186317698" duration="23022000" />
       <workItem from="1494691929520" duration="4535000" />
-      <workItem from="1494764562256" duration="1134000" />
+      <workItem from="1494764562256" duration="1263000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize ng2 app with webpack2">
       <created>1493679236139</created>
@@ -792,11 +780,25 @@
       <option name="project" value="LOCAL" />
       <updated>1494766252958</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Update .idea">
+      <created>1494766278344</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1494766278344</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Replace sass by scss&#10;&#10;+ some little changes on styles">
+      <created>1494766381882</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1494766381882</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48441000" />
+    <option name="totallyTimeSpent" value="48570000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1128" extended-state="6" />
@@ -828,7 +830,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add Angular Material custom theme to the app" />
     <MESSAGE value="Add Angular Material &amp; animations to the app" />
     <MESSAGE value="Update webpack.config.js" />
     <MESSAGE value="Add angular-material module" />
@@ -853,7 +854,8 @@
     <MESSAGE value="Add JetBrains editor project settings" />
     <MESSAGE value="Test md table" />
     <MESSAGE value="Update .idea" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update .idea" />
+    <MESSAGE value="Replace sass by scss&#10;&#10;+ some little changes on styles" />
+    <option name="LAST_COMMIT_MESSAGE" value="Replace sass by scss&#10;&#10;+ some little changes on styles" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1157,8 +1159,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/view/organisms/Header/component.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="28" column="12" lean-forward="true" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+        <state relative-caret-position="209">
+          <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
           <folding />
         </state>
       </provider>
