@@ -39,12 +39,12 @@ const config = {
         use: ['html-loader']
       },
       {
-        test: /component\.sass/,
+        test: /component\.scss/,
         use: ['raw-loader', 'sass-loader']
       },
       {
-        test: /\.sass/,
-        exclude: /component\.sass/,
+        test: /\.scss/,
+        exclude: /component\.scss/,
         use: ExtractTextPlugin.extract({
           use: [
             {

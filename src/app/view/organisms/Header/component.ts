@@ -7,7 +7,7 @@ import headerContent from '../../../model/header' // TODO: service
 @Component({
   selector: 'gp-header',
   template: require('./component.html'),
-  styles: [require('./component.sass')]
+  styles: [require('./component.scss')]
 })
 export default class HeaderOrganism {
   @ViewChild(MdTooltip) tooltip: MdTooltip

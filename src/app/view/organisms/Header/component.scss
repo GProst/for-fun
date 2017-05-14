@@ -1,0 +1,41 @@
+.tabs-container {
+  width: 8.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: 600px) {
+    width: 11.4rem;
+  }
+}
+
+.toolbar-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.avatar-btn {
+  position: relative;
+  background: white;
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+.avatar {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
