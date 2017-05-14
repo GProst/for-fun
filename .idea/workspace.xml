@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35a58a13-25b8-48c9-b4e6-a4444cadb730" name="Default" comment="Test md table">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/markdown-navigator.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/markdown-navigator/profiles_settings.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/view/angular-material/index.scss" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/view/organisms/Header/component.scss" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/index.scss" />
@@ -11,7 +9,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/view/organisms/Header/component.sass" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/index.sass" afterPath="" />
       <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/app.component.sass" afterPath="$PROJECT_DIR$/src/app/app.component.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/view/angular-material/module.ts" afterPath="$PROJECT_DIR$/src/app/view/angular-material/module.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/view/organisms/Header/component.html" afterPath="$PROJECT_DIR$/src/app/view/organisms/Header/component.html" />
@@ -562,7 +559,7 @@
       <workItem from="1494079117497" duration="9882000" />
       <workItem from="1494186317698" duration="23022000" />
       <workItem from="1494691929520" duration="4535000" />
-      <workItem from="1494764562256" duration="1115000" />
+      <workItem from="1494764562256" duration="1134000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize ng2 app with webpack2">
       <created>1493679236139</created>
@@ -788,11 +785,18 @@
       <option name="project" value="LOCAL" />
       <updated>1494764418765</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Update .idea">
+      <created>1494766252958</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1494766252958</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48422000" />
+    <option name="totallyTimeSpent" value="48441000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1128" extended-state="6" />
@@ -824,7 +828,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add new packages ti the project&#10;&#10;Deps: @angular-animations, normalize.css&#10;Dev-deps: extract-text-webpack-plugin, node-sass, sass-loader" />
     <MESSAGE value="Add Angular Material custom theme to the app" />
     <MESSAGE value="Add Angular Material &amp; animations to the app" />
     <MESSAGE value="Update webpack.config.js" />
@@ -849,7 +852,8 @@
     <MESSAGE value="Optimise webpack building process" />
     <MESSAGE value="Add JetBrains editor project settings" />
     <MESSAGE value="Test md table" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test md table" />
+    <MESSAGE value="Update .idea" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update .idea" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
