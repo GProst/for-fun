@@ -1,8 +1,8 @@
 import {Component} from '@angular/core'
 
 @Component({
-  selector: 'gp-footer',
+  selector: 'gp-github-icon',
   template: require('./component.html'),
   styles: [require('./component.scss')]
 })
-export default class HeaderOrganism {}
+export default class GitHybIconIconAtom {}

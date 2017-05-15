@@ -1,5 +1,18 @@
 @import "../../../sass-vars/breakpoints";
 
+// Angular Material theming
+@import '~@angular/material/theming';
+@include mat-core();
+
+$gprostV1-app-primary: mat-palette($mat-amber);
+$gprostV1-app-accent:  mat-palette($mat-indigo, A200, A100, A400);
+
+$gprostV1-app-theme: mat-light-theme($gprostV1-app-primary, $gprostV1-app-accent);
+
+@include angular-material-theme($gprostV1-app-theme);
+
+
+// Custom style overrides
 .mat-button, .mat-fab, .mat-icon-button, .mat-mini-fab, .mat-raised-button {
   font-size: 12px !important;
   

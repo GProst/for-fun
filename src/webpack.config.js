@@ -57,6 +57,10 @@ const config = {
           ],
           fallback: 'style-loader'
         })
+      },
+      {
+        test: /\.svg/,
+        use: ['file-loader']
       }
     ]
   },
