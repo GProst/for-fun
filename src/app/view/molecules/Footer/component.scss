@@ -7,9 +7,26 @@
   height: $footer-height-xs;
   box-shadow: 0 -1px 8px 1px rgba(100, 100, 100, 0.3);
   background: $primary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 300;
+  color: white;
+  font-size: 0.75em;
   
   @media #{$gt-xs} {
     height: $footer-height-gt-xs;
   }
 }
 
+.icon-link {
+  display: block;
+  cursor: default;
+  height: 17px;
+  width: 17px;
+  margin: 0 0.3rem;
+}
+
+.author {
+  margin: 0 1rem;
+}
