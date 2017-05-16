@@ -1,12 +1,12 @@
 import {NgModule} from '@angular/core'
 
-import MoleculesModule from '../molecules/module'
+import {MoleculesModule} from '../molecules/module'
 
-import Header from './Header/component'
+import {HeaderOrganism} from './Header/component'
 
 @NgModule({
-  declarations: [Header],
+  declarations: [HeaderOrganism],
   imports: [MoleculesModule],
-  exports: [MoleculesModule, Header]
+  exports: [MoleculesModule, HeaderOrganism]
 })
-export default class OrganismsModule {}
+export class OrganismsModule {}

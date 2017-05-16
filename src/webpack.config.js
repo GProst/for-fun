@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const WebpackChunkHash = require("webpack-chunk-hash")
 const CleanWebpackPlugin = require("clean-webpack-plugin")
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const {AotPlugin} = require('@ngtools/webpack')
 const path = require("path");
 
 const isProd = process.env.NODE_ENV === 'production'
@@ -34,12 +35,7 @@ const config = {
     rules: [
       {
         test: /\.ts/,
-        use: [{
-          loader: 'awesome-typescript-loader',
-          options: {
-            configFileName: isProd ? './tsconfig.production.json' : './tsconfig.json'
-          }
-        }]
+        loader: isProd ? '@ngtools/webpack' : 'awesome-typescript-loader'
       },
       {
         test: /\.html/,
@@ -118,6 +114,15 @@ config.devServer = {
   port: isProd ? 8181 : 8080,
   publicPath: config.output.publicPath,
   historyApiFallback: true
+}
+
+if (isProd) {
+  config.plugins.push(
+    new AotPlugin({
+      tsConfigPath: 'tsconfig.production.json',
+      skipCodeGeneration: true
+    })
+  )
 }
 
 module.exports = config
