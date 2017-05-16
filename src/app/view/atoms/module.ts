@@ -11,6 +11,8 @@ import LinkedInIcon from './@icon@LinkedIn/component'
 @NgModule({
   declarations: [TwitterIcon, StackOverflowIcon, GitHybIcon, LinkedInIcon],
   imports: [BrowserModule, AngularMaterialModule, FlexLayoutModule],
-  exports: [BrowserModule, AngularMaterialModule, FlexLayoutModule, TwitterIcon, StackOverflowIcon, GitHybIcon, LinkedInIcon]
+  exports: [BrowserModule, AngularMaterialModule, FlexLayoutModule, TwitterIcon, StackOverflowIcon, GitHybIcon,
+    LinkedInIcon
+  ]
 })
 export default class AtomsModule {}
