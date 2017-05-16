@@ -1,11 +1,14 @@
-"use strict";
+"use strict"
 
-const webpack = require("webpack");
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const WebpackChunkHash = require("webpack-chunk-hash");
-const CleanWebpackPlugin = require("clean-webpack-plugin");
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const webpack = require("webpack")
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const WebpackChunkHash = require("webpack-chunk-hash")
+const CleanWebpackPlugin = require("clean-webpack-plugin")
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const {AotPlugin} = require('@ngtools/webpack')
 const path = require("path");
+
+const isProd = process.env.NODE_ENV === 'production'
 
 function _isVendor(module) { // all from node_modules folder
   return module.context && module.context.indexOf('node_modules') !== -1;
@@ -32,7 +35,7 @@ const config = {
     rules: [
       {
         test: /\.ts/,
-        use: ['awesome-typescript-loader']
+        loader: isProd ? '@ngtools/webpack' : 'awesome-typescript-loader'
       },
       {
         test: /\.html/,
@@ -89,7 +92,15 @@ const config = {
       }
     }),
 
-    new WebpackChunkHash()
+    new WebpackChunkHash(),
+
+    new webpack.LoaderOptionsPlugin({
+      options : {
+        htmlLoader : {
+          minimize : false // do not minimize html - it will lead to errors
+        }
+      }
+    })
   ],
 
   output: {
@@ -100,9 +111,18 @@ const config = {
 }
 
 config.devServer = {
-  port: 8080,
+  port: isProd ? 8181 : 8080,
   publicPath: config.output.publicPath,
   historyApiFallback: true
+}
+
+if (isProd) {
+  config.plugins.push(
+    new AotPlugin({
+      tsConfigPath: 'tsconfig.production.json',
+      skipCodeGeneration: true
+    })
+  )
 }
 
 module.exports = config

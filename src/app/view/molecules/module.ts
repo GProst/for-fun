@@ -1,11 +1,11 @@
 import {NgModule} from '@angular/core'
 
-import AtomsModule from '../atoms/module'
-import Footer from './Footer/component'
+import {AtomsModule} from '../atoms/module'
+import {FooterMolecule} from './Footer/component'
 
 @NgModule({
-  declarations: [Footer],
+  declarations: [FooterMolecule],
   imports: [AtomsModule],
-  exports: [AtomsModule, Footer]
+  exports: [AtomsModule, FooterMolecule]
 })
-export default class MoleculesModule {}
+export class MoleculesModule {}
