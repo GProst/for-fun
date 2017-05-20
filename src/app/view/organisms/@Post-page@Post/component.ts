@@ -8,8 +8,7 @@ export interface PostData {
   mainContent: PostMainContent
 }
 
-// type PostMainContent = Array<PostImage | PostSubTitle | PostParagraph | PostGallery | PostVideo>
-type PostMainContent = Array<PostParagraph>
+type PostMainContent = Array<PostImage | PostSubTitle | PostParagraph | PostGallery | PostVideo>
 type PostImage = {
   type: 'img',
   payload: ImageContent

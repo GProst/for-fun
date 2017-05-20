@@ -24,3 +24,14 @@
   line-height: 2rem;
   font-size: 1.2rem;
 }
+
+.single-img {
+  width: 100%;
+  display: block;
+}
+
+.subtitle {
+  @media #{$gt-xs} {
+    text-align: center;
+  }
+}
