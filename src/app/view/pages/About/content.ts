@@ -1,0 +1,14 @@
+export const postData = {
+  title: 'We are on About Page!',
+  frontImage: {
+    src: 'https://cdn-images-1.medium.com/max/2000/1*DOh8hikbDKQbziSE-LWKJg.jpeg',
+    srcSet: 'https://cdn-images-1.medium.com/max/2000/1*DOh8hikbDKQbziSE-LWKJg.jpeg 1x',
+    alt: 'tstFrontImage'
+  },
+  mainContent: [
+    {
+      type: <'paragraph'> 'paragraph',
+      payload: 'Paragraph content'
+    }
+  ]
+}

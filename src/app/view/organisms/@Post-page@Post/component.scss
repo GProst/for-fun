@@ -1,0 +1,26 @@
+@import '../../../../sass-vars/breakpoints';
+
+:host {
+  width: 100%;
+  display: block;
+}
+
+.title {
+  margin-top: 0;
+  margin-bottom: 4rem;
+  
+  @media #{$gt-xs} {
+    text-align: center;
+  }
+}
+
+.front-image-container {
+  display: block;
+  position: relative;
+  width: 100vw;
+}
+
+.paragraph {
+  line-height: 2rem;
+  font-size: 1.2rem;
+}

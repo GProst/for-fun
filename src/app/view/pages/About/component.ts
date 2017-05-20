@@ -2,6 +2,10 @@ import {Component, HostBinding} from '@angular/core'
 
 import {slideFromToRight} from './animations'
 
+import {PostData} from '../../organisms/@Post-page@Post/component'
+
+import {postData} from './content'
+
 @Component({
   selector: 'gp-about-page',
   templateUrl: './component.html',
@@ -10,4 +14,6 @@ import {slideFromToRight} from './animations'
 })
 export class AboutPage {
   @HostBinding('@routeAnimation') routeAnimation = true
+
+  postData: PostData = postData
 }
