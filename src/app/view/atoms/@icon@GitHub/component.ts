@@ -2,7 +2,7 @@ import {Component} from '@angular/core'
 
 @Component({
   selector: 'gp-github-icon',
-  template: require('./component.html'),
-  styles: [require('./component.scss')]
+  templateUrl: './component.html',
+  styleUrls: ['./component.scss']
 })
 export class GitHybIconIconAtom {}

@@ -2,17 +2,24 @@ import {Component, ViewChild} from '@angular/core'
 import {Router} from '@angular/router'
 import {MdTooltip} from '@angular/material'
 
-import {tabs} from '../../../model/header' // TODO: service
-
 @Component({
   selector: 'gp-header',
-  template: require('./component.html'),
-  styles: [require('./component.scss')]
+  templateUrl: './component.html',
+  styleUrls: ['./component.scss']
 })
 export class HeaderOrganism {
   @ViewChild(MdTooltip) tooltip: MdTooltip
 
-  tabs = tabs
+  tabs = [
+    {
+      label: 'Posts',
+      path: '/posts'
+    },
+    {
+      label: 'About',
+      path: '/about'
+    }
+  ]
 
   constructor(
     private router: Router

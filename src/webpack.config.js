@@ -35,7 +35,7 @@ const config = {
     rules: [
       {
         test: /\.ts/,
-        loader: isProd ? '@ngtools/webpack' : 'awesome-typescript-loader'
+        loaders: isProd ? ['@ngtools/webpack'] : ['awesome-typescript-loader', 'angular2-template-loader']
       },
       {
         test: /\.html/,
