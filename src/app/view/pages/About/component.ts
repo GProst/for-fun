@@ -4,8 +4,8 @@ import {slideFromToRight} from './animations'
 
 @Component({
   selector: 'gp-about-page',
-  template: require('./component.html'),
-  styles: [require('./component.scss')],
+  templateUrl: './component.html',
+  styleUrls: ['./component.scss'],
   animations: [slideFromToRight]
 })
 export class AboutPage {

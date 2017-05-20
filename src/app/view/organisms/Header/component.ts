@@ -6,8 +6,8 @@ import {tabs} from '../../../model/header' // TODO: service
 
 @Component({
   selector: 'gp-header',
-  template: require('./component.html'),
-  styles: [require('./component.scss')]
+  templateUrl: './component.html',
+  styleUrls: ['./component.scss']
 })
 export class HeaderOrganism {
   @ViewChild(MdTooltip) tooltip: MdTooltip
