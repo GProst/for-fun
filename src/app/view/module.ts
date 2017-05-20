@@ -1,9 +1,9 @@
 import {NgModule} from '@angular/core'
 
-import {TemplatesModule} from './templates/module'
+import {PagesModule} from './pages/module'
 
 @NgModule({
-  imports: [TemplatesModule],
-  exports: [TemplatesModule]
+  imports: [PagesModule],
+  exports: [PagesModule]
 })
 export class ViewModule {}

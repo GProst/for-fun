@@ -1,5 +1,6 @@
 @import '~normalize.css';
 @import './sass-vars/breakpoints';
+@import './sass-vars/palette-colors';
 
 // Global styles
 
@@ -13,7 +14,7 @@ html {
 
 body {
   font-family: 'Open Sans', sans-serif;
-  color: #636261;
+  color: $font-main-color;
 }
 
 h1 {

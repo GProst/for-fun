@@ -8,6 +8,6 @@ import {slideFromToLeft} from './animations'
   styles: [require('./component.scss')],
   animations: [slideFromToLeft]
 })
-export class PostsTemplate {
+export class PostsPage {
   @HostBinding('@routeAnimation') routeAnimation = true
 }
