@@ -3,13 +3,18 @@
 :host {
   width: 100%;
   display: block;
+  margin-bottom: 3rem;
+  
+  @media #{$gt-xs} {
+    margin-bottom: 4rem;
+  }
 }
 
 .title {
-  margin-top: 0;
-  margin-bottom: 4rem;
+  margin: 3rem auto;
   
   @media #{$gt-xs} {
+    margin: 4rem auto;
     text-align: center;
   }
 }
