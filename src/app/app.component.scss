@@ -8,29 +8,18 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 100%;
+  overflow: hidden;
 }
 
 .main {
   overflow: hidden;
   overflow-y: auto;
   margin-bottom: auto;
+  position: relative;
   height: calc(100vh - #{$header-height-xs} - #{$footer-height-xs});
   
   @media #{$gt-xs} {
     height: calc(100vh - #{$header-height-gt-xs} - #{$footer-height-gt-xs});
-  }
-}
-
-$margin: 4rem;
-.template-container {
-  position: relative;
-  max-width: 960px;
-  margin: $margin auto;
-  padding: 0 2rem;
-  min-height: calc(100vh - #{$header-height-xs} - #{$footer-height-xs} - #{2 * $margin});
-  
-  @media #{$gt-xs} {
-    min-height: calc(100vh - #{$header-height-gt-xs} - #{$footer-height-gt-xs} - #{2 * $margin});
-    padding: 0 4rem;
   }
 }

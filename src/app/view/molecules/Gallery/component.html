@@ -1,0 +1,3 @@
+<ng-container *ngFor="let img of images; let i = index">
+  <gp-img [ngClass]="setImgClass(i)" [content]="img" (click)="onImgClick(i)"></gp-img>
+</ng-container>

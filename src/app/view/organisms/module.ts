@@ -4,11 +4,11 @@ import {MoleculesModule} from '../molecules/module'
 
 import {HeaderOrganism} from './Header/component'
 import {PostOrganism} from './Post/component'
-import {GalleryOrganism} from './Gallery/component'
+import {GallerySliderContainerOrganism} from './GallerySliderContainer/component'
 
 @NgModule({
-  declarations: [HeaderOrganism, PostOrganism, GalleryOrganism],
+  declarations: [HeaderOrganism, PostOrganism, GallerySliderContainerOrganism],
   imports: [MoleculesModule],
-  exports: [MoleculesModule, HeaderOrganism, PostOrganism, GalleryOrganism]
+  exports: [MoleculesModule, HeaderOrganism, PostOrganism, GallerySliderContainerOrganism]
 })
 export class OrganismsModule {}
