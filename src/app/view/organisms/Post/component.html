@@ -4,4 +4,5 @@
   <p *ngIf="content.type === 'paragraph'" class="paragraph">{{content.payload}}</p>
   <gp-img *ngIf="content.type === 'img'" class="single-img" [content]="content.payload"></gp-img>
   <h2 *ngIf="content.type === 'subtitle'" class="subtitle">{{content.payload}}</h2>
+  <gp-gallery *ngIf="content.type === 'gallery'" class="gallery" [images]="content.payload"></gp-gallery>
 </ng-container>

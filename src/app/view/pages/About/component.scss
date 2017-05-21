@@ -1,5 +1,19 @@
+@import '../../../../sass-vars/header';
+@import '../../../../sass-vars/footer';
+@import '../../../../sass-vars/breakpoints';
+
 :host {
-  width: 100%;
   display: block;
   position: relative;
+  max-width: 960px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  min-height: calc(100vh - #{$header-height-xs} - #{$footer-height-xs});
+  
+  @media #{$gt-xs} {
+    min-height: calc(100vh - #{$header-height-gt-xs} - #{$footer-height-gt-xs});
+    padding: 4rem 4rem;
+  }
 }

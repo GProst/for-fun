@@ -1,0 +1,40 @@
+@import '../../../../sass-vars/breakpoints';
+
+:host {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.img {
+  flex: 1 1 31%;
+  margin-right: 2%;
+  cursor: zoom-in;
+  position: relative;
+}
+
+.thumbnail-img {
+  height: 18vw;
+  max-height: 11rem;
+}
+
+.thumbnail-img /deep/ img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.front-img {
+  flex-basis: 100%;
+  margin: 0 0 0.3rem;
+  
+  @media #{$gt-xs} {
+    margin-bottom: 1rem;
+  }
+}
+
+.thumbnail-img:last-child{
+  margin: 0;
+}
