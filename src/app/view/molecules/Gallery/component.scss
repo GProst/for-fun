@@ -14,8 +14,13 @@
   margin-bottom: 0.5%;
   cursor: zoom-in;
   position: relative;
-  height: 18vw;
-  max-height: 17rem;
+  height: 29vw;
+  max-height: 20rem;
+  
+  @media #{$gt-sm} {
+    height: 18vw;
+    max-height: 17rem;
+  }
 }
 
 .img /deep/ img {

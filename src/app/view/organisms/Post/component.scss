@@ -1,8 +1,32 @@
 @import '../../../../sass-vars/breakpoints';
+@import '../../../../sass-vars/palette-colors';
+
+$text-side-padding: 3rem;
 
 :host {
   width: 100%;
   display: block;
+  margin-bottom: 0;
+  
+  @media #{$gt-xs} {
+    margin-bottom: 3.5rem;
+  }
+}
+
+.post-article {
+  padding-bottom: 3rem;
+  position: relative;
+  background: white;
+  
+  @media #{$lt-sm} {
+    margin-top: 0 !important;
+  }
+}
+
+.title {
+  padding: 3rem $text-side-padding;
+  color: white;
+  background: $primary-dark;
   margin-bottom: 3rem;
   
   @media #{$gt-xs} {
@@ -10,17 +34,9 @@
   }
 }
 
-.title {
-  margin: 3rem auto;
-  
-  @media #{$gt-xs} {
-    margin: 4rem auto;
-    text-align: center;
-  }
-}
-
 .front-image-container {
-  display: block;
+  display: flex;
+  flex-direction: column;
   position: relative;
   width: 100vw;
 }
@@ -28,6 +44,7 @@
 .paragraph {
   line-height: 2rem;
   font-size: 1.2rem;
+  padding: 0 $text-side-padding;
 }
 
 .single-img {
@@ -36,6 +53,7 @@
 }
 
 .subtitle {
+  padding: 0 $text-side-padding;
   @media #{$gt-xs} {
     text-align: center;
   }
