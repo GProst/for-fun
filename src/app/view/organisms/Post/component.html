@@ -1,5 +1,5 @@
-<h1 class="title">{{title}}</h1>
 <gp-img [content]="frontImage" class="front-image-container" [ngStyle]="frontImageContainerStyles"></gp-img>
+<h1 class="title">{{title}}</h1>
 <ng-container *ngFor="let content of mainContent">
   <p *ngIf="content.type === 'paragraph'" class="paragraph">{{content.payload}}</p>
   <gp-img *ngIf="content.type === 'img'" class="single-img" [content]="content.payload"></gp-img>
