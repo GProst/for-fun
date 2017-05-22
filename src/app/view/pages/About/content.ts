@@ -45,6 +45,11 @@ export const postData = {
           alt: 'some text'
         },
         {
+          src: 'https://cdn-images-1.medium.com/max/2000/1*Nozl2qd0SV8Uya2CEkF_mg.jpeg',
+          srcSet: 'https://cdn-images-1.medium.com/max/2000/1*Nozl2qd0SV8Uya2CEkF_mg.jpeg 1x',
+          alt: 'some text'
+        },
+        {
           src: 'https://cdn-images-1.medium.com/max/800/1*7qYONdlJuS0pkUpdav-LQQ.jpeg',
           srcSet: 'https://cdn-images-1.medium.com/max/800/1*7qYONdlJuS0pkUpdav-LQQ.jpeg 1x',
           alt: 'some text'

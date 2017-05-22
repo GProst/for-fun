@@ -17,8 +17,7 @@ export class GalleryMolecule {
   setImgClass(index: number): object {
     return {
       img: true,
-      'thumbnail-img': index !== 0,
-      'front-img': index === 0
+      'long-img': index === 3
     }
   }
 
