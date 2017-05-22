@@ -9,32 +9,30 @@
 }
 
 .img {
-  flex: 1 1 31%;
-  margin-right: 2%;
+  flex: 1 1 33%;
+  margin-right: 0.5%;
+  margin-bottom: 0.5%;
   cursor: zoom-in;
   position: relative;
+  height: 29vw;
+  max-height: 20rem;
+  
+  @media #{$gt-sm} {
+    height: 18vw;
+    max-height: 17rem;
+  }
 }
 
-.thumbnail-img {
-  height: 18vw;
-  max-height: 11rem;
-}
-
-.thumbnail-img /deep/ img {
+.img /deep/ img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
-.front-img {
-  flex-basis: 100%;
-  margin: 0 0 0.3rem;
-  
-  @media #{$gt-xs} {
-    margin-bottom: 1rem;
-  }
+.long-img {
+  flex-basis: 66.5%;
 }
 
-.thumbnail-img:last-child{
-  margin: 0;
+.img:nth-child(3), .img:last-child{
+  margin-right: 0;
 }

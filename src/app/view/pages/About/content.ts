@@ -8,7 +8,16 @@ export const postData = {
   mainContent: [
     {
       type: <'paragraph'> 'paragraph',
-      payload: 'Paragraph content'
+      payload: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci alias asperiores aut blanditiis 
+      culpa dignissimos dolor dolore dolorem eos expedita fugit harum laboriosam magni, minus non quaerat quidem 
+      quisquam reiciendis sequi suscipit veritatis, voluptates. Alias aliquam animi atque aut autem, blanditiis 
+      consequuntur cum doloremque ea eaque earum ex fuga fugit ipsum iusto laboriosam nostrum placeat quae 
+      reprehenderit temporibus. Labore! Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci alias 
+      asperiores aut blanditiis 
+      culpa dignissimos dolor dolore dolorem eos expedita fugit harum laboriosam magni, minus non quaerat quidem 
+      quisquam reiciendis sequi suscipit veritatis, voluptates. Alias aliquam animi atque aut autem, blanditiis 
+      consequuntur cum doloremque ea eaque earum ex fuga fugit ipsum iusto laboriosam nostrum placeat quae 
+      reprehenderit temporibus. Labore!`
     },
     {
       type: <'img'> 'img',
@@ -19,12 +28,42 @@ export const postData = {
       }
     },
     {
+      type: <'paragraph'> 'paragraph',
+      payload: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci alias asperiores aut blanditiis 
+      culpa dignissimos dolor dolore dolorem eos expedita fugit harum laboriosam magni, minus non quaerat quidem 
+      quisquam reiciendis sequi suscipit veritatis, voluptates. Alias aliquam animi atque aut autem, blanditiis 
+      consequuntur cum doloremque ea eaque earum ex fuga fugit ipsum iusto laboriosam nostrum placeat quae 
+      reprehenderit temporibus. Labore!`
+    },
+    {
       type: <'subtitle'> 'subtitle',
       payload: 'Subtitle'
     },
     {
       type: <'paragraph'> 'paragraph',
-      payload: 'Another paragraph content'
+      payload: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci alias asperiores aut blanditiis 
+      culpa dignissimos dolor dolore dolorem eos expedita fugit harum laboriosam magni, minus non quaerat quidem 
+      quisquam reiciendis sequi suscipit veritatis, voluptates. Alias aliquam animi atque aut autem, blanditiis 
+      consequuntur cum doloremque ea eaque earum ex fuga fugit ipsum iusto laboriosam nostrum placeat quae 
+      reprehenderit temporibus. Labore! Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci 
+      alias asperiores aut blanditiis 
+      culpa dignissimos dolor dolore dolorem eos expedita fugit harum laboriosam magni, minus non quaerat quidem 
+      quisquam reiciendis sequi suscipit veritatis, voluptates. Alias aliquam animi atque aut autem, blanditiis 
+      consequuntur cum doloremque ea eaque earum ex fuga fugit ipsum iusto laboriosam nostrum placeat quae 
+      reprehenderit temporibus. Labore! Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci alias 
+      asperiores aut blanditiis 
+      culpa dignissimos dolor dolore dolorem eos expedita fugit harum laboriosam magni, minus non quaerat quidem 
+      quisquam reiciendis sequi suscipit veritatis, voluptates. Alias aliquam animi atque aut autem, blanditiis 
+      consequuntur cum doloremque ea eaque earum ex fuga fugit ipsum iusto laboriosam nostrum placeat quae 
+      reprehenderit temporibus. Labore!`
+    },
+    {
+      type: <'paragraph'> 'paragraph',
+      payload: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci alias asperiores aut blanditiis 
+      culpa dignissimos dolor dolore dolorem eos expedita fugit harum laboriosam magni, minus non quaerat quidem 
+      quisquam reiciendis sequi suscipit veritatis, voluptates. Alias aliquam animi atque aut autem, blanditiis 
+      consequuntur cum doloremque ea eaque earum ex fuga fugit ipsum iusto laboriosam nostrum placeat quae 
+      reprehenderit temporibus. Labore!`
     },
     {
       type: <'gallery'> 'gallery',
@@ -45,6 +84,11 @@ export const postData = {
           alt: 'some text'
         },
         {
+          src: 'https://cdn-images-1.medium.com/max/2000/1*Nozl2qd0SV8Uya2CEkF_mg.jpeg',
+          srcSet: 'https://cdn-images-1.medium.com/max/2000/1*Nozl2qd0SV8Uya2CEkF_mg.jpeg 1x',
+          alt: 'some text'
+        },
+        {
           src: 'https://cdn-images-1.medium.com/max/800/1*7qYONdlJuS0pkUpdav-LQQ.jpeg',
           srcSet: 'https://cdn-images-1.medium.com/max/800/1*7qYONdlJuS0pkUpdav-LQQ.jpeg 1x',
           alt: 'some text'
@@ -53,7 +97,19 @@ export const postData = {
     },
     {
       type: <'paragraph'> 'paragraph',
-      payload: 'yet another paragraph'
+      payload: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci alias asperiores aut blanditiis 
+      culpa dignissimos dolor dolore dolorem eos expedita fugit harum laboriosam magni, minus non quaerat quidem 
+      quisquam reiciendis sequi suscipit veritatis, voluptates. Alias aliquam animi atque aut autem, blanditiis 
+      consequuntur cum doloremque ea eaque earum ex fuga fugit ipsum iusto laboriosam nostrum placeat quae 
+      reprehenderit temporibus. Labore!`
     },
+    {
+      type: <'paragraph'> 'paragraph',
+      payload: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci alias asperiores aut blanditiis 
+      culpa dignissimos dolor dolore dolorem eos expedita fugit harum laboriosam magni, minus non quaerat quidem 
+      quisquam reiciendis sequi suscipit veritatis, voluptates. Alias aliquam animi atque aut autem, blanditiis 
+      consequuntur cum doloremque ea eaque earum ex fuga fugit ipsum iusto laboriosam nostrum placeat quae 
+      reprehenderit temporibus. Labore!`
+    }
   ]
 }

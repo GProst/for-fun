@@ -26,7 +26,7 @@ type PostGallery = {
   payload: Array<ImageContent>
 }
 type PostVideo = {
-  type: 'gallery',
+  type: 'video',
   payload: string // TODO
 }
 
@@ -36,6 +36,8 @@ type PostVideo = {
   styleUrls: ['./component.scss']
 })
 export class PostOrganism implements OnChanges, OnInit, OnDestroy {
+  private frontImageElem: HTMLImageElement
+
   @Input() postData: PostData
 
   title: string
@@ -43,8 +45,9 @@ export class PostOrganism implements OnChanges, OnInit, OnDestroy {
   mainContent: PostMainContent
 
   frontImageContainerStyles: object
+  articleStyles: object
 
-  constructor(public elem: ElementRef) {
+  constructor(private elem: ElementRef) {
     this.frontImageContainerStyles = {
       left: 0
     }
@@ -59,10 +62,25 @@ export class PostOrganism implements OnChanges, OnInit, OnDestroy {
     }
   }
 
+  // article lies on 1/4 of frontImage
+  setArticlePosition = () => {
+    const frontImageHeight = this.frontImageElem.clientHeight
+    const marginTop = frontImageHeight * 0.25
+    this.articleStyles = {
+      marginTop: `-${marginTop}px`
+    }
+  }
+
   ngOnChanges() {
     this.title = this.postData.title
     this.frontImage = this.postData.frontImage
     this.mainContent = this.postData.mainContent
+
+    this.frontImageElem = this.elem.nativeElement.querySelector('.front-image-container img')
+    this.frontImageElem.onload = () => {
+      this.setArticlePosition()
+      window.addEventListener('resize', this.setArticlePosition)
+    }
   }
 
   ngOnInit() {
@@ -72,5 +90,6 @@ export class PostOrganism implements OnChanges, OnInit, OnDestroy {
 
   ngOnDestroy() {
     window.removeEventListener('resize', this.setFrontImagePosition)
+    window.removeEventListener('resize', this.setArticlePosition)
   }
 }

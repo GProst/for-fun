@@ -17,6 +17,7 @@
   overflow-y: auto;
   margin-bottom: auto;
   position: relative;
+  background: hsla(0, 0%, 94%, 1);
   height: calc(100vh - #{$header-height-xs} - #{$footer-height-xs});
   
   @media #{$gt-xs} {

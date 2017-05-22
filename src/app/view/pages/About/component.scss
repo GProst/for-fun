@@ -9,7 +9,7 @@
   width: 100%;
   box-sizing: border-box;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0;
   min-height: calc(100vh - #{$header-height-xs} - #{$footer-height-xs});
   
   @media #{$gt-xs} {
