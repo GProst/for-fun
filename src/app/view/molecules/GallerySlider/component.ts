@@ -59,7 +59,8 @@ export class GallerySliderMolecule implements OnChanges, OnInit, OnDestroy {
         sizes = `${slideWidthPercentage}vw`
       }
     }
-    this.slides[this.currentSlide].sizes = sizes
+    // creating new object, so Angular will update image sizes attr (otherwise it won't)
+    this.slides[this.currentSlide] = {...this.slides[this.currentSlide], sizes}
   }
 
   setCurrentSlideClass() {
