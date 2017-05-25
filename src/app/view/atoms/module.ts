@@ -8,13 +8,16 @@ import {StackOverflowIconAtom} from './@icon@StackOverflow/component'
 import {GitHybIconIconAtom} from './@icon@GitHub/component'
 import {LinkedInIconAtom} from './@icon@LinkedIn/component'
 import {ImageAtom} from './Image/component'
+import {CloseIconAtom} from './@icon@Close/component'
 
 @NgModule({
-  declarations: [TwitterIconAtom, StackOverflowIconAtom, GitHybIconIconAtom, LinkedInIconAtom, ImageAtom],
+  declarations: [
+    TwitterIconAtom, StackOverflowIconAtom, GitHybIconIconAtom, LinkedInIconAtom, ImageAtom, CloseIconAtom
+  ],
   imports: [BrowserModule, AngularMaterialModule, FlexLayoutModule],
   exports: [
     BrowserModule, AngularMaterialModule, FlexLayoutModule, TwitterIconAtom, StackOverflowIconAtom, GitHybIconIconAtom,
-    LinkedInIconAtom, ImageAtom
+    LinkedInIconAtom, ImageAtom, CloseIconAtom
   ]
 })
 export class AtomsModule {}
