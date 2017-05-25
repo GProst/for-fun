@@ -1,20 +1,15 @@
 import {Injectable} from '@angular/core'
 import {Subject}    from 'rxjs/Subject'
 
-import {ImageContent} from '../atoms/Image/component'
-
-export type sliderDataType = {
-  slideIndex: number,
-  slides: Array<ImageContent>
-}
+import {SliderData, Slide} from '../molecules/GallerySlider/component'
 
 @Injectable()
 export class GallerySliderService {
-  private sliderTriggeredSource = new Subject<sliderDataType>()
+  private sliderTriggeredSource = new Subject<SliderData>()
 
   sliderTriggered$ = this.sliderTriggeredSource.asObservable()
 
-  triggerSlider(slideIndex: number, slides: Array<ImageContent>) {
+  triggerSlider(slideIndex: number, slides: Array<Slide>) {
     this.sliderTriggeredSource.next({slideIndex, slides})
   }
 }

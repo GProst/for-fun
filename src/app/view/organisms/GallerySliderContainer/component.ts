@@ -1,5 +1,6 @@
 import {Component} from '@angular/core'
-import {GallerySliderService, sliderDataType} from '../../services/gallery-slider.service'
+import {GallerySliderService} from '../../services/gallery-slider.service'
+import {SliderData} from '../../molecules/GallerySlider/component'
 
 @Component({
   selector: 'gp-gallery-slider-container',
@@ -9,13 +10,13 @@ import {GallerySliderService, sliderDataType} from '../../services/gallery-slide
 export class GallerySliderContainerOrganism {
   isActive: boolean = false
 
-  public sliderData: sliderDataType
+  public sliderData: SliderData
 
   onSliderClose() {
     this.isActive = false
   }
 
-  activateSlider = (sliderData: sliderDataType) => {
+  activateSlider = (sliderData: SliderData) => {
     this.sliderData = sliderData
     this.isActive = true
   }
