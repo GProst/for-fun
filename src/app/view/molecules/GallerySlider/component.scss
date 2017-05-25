@@ -2,9 +2,21 @@
   width: 100vw;
   height: 100vh;
   background: white;
+  display: flex;
+}
+
+.slide {
+  margin: auto;
+  width: 100vw;
+  height: auto;
+}
+
+.arrow {
+  position: absolute;
   display: block;
 }
 
-.slider-img {
-
+.close-btn {
+  position: absolute;
+  display: block;
 }

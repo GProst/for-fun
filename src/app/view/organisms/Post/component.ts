@@ -1,6 +1,7 @@
 import {Component, Input, OnChanges, OnInit, OnDestroy, ElementRef} from '@angular/core'
 
 import {ImageContent} from '../../atoms/Image/component'
+import {Slide} from '../../molecules/GallerySlider/component'
 
 export interface PostData {
   title: string,
@@ -23,7 +24,7 @@ type PostParagraph = {
 }
 type PostGallery = {
   type: 'gallery',
-  payload: Array<ImageContent>
+  payload: Array<Slide>
 }
 type PostVideo = {
   type: 'video',

@@ -2,7 +2,7 @@ import {Component, Input} from '@angular/core'
 
 import {GallerySliderService} from '../../services/gallery-slider.service'
 
-import {ImageContent} from '../../atoms/Image/component'
+import {Slide} from '../../molecules/GallerySlider/component'
 
 @Component({
   selector: 'gp-gallery',
@@ -10,7 +10,7 @@ import {ImageContent} from '../../atoms/Image/component'
   styleUrls: ['./component.scss']
 })
 export class GalleryMolecule {
-  @Input() images: Array<ImageContent>
+  @Input() images: Array<Slide>
 
   constructor(private sliderService: GallerySliderService) {}
 
