@@ -1,22 +1,77 @@
+@import '../../../../sass-vars/breakpoints';
+
 :host {
   width: 100vw;
   height: 100vh;
-  background: white;
+  background: rgba(58, 58, 58, 0.93);
   display: flex;
 }
 
 .slide {
   margin: auto;
-  width: 100vw;
+}
+
+.desktop {
+  width: 50vw;
   height: auto;
+}
+
+$btn-width: 4rem;
+$btn-width-gt-sm: 5rem;
+.close-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: transparent;
+  cursor: pointer;
+  height: $btn-width;
+  width: $btn-width;
+  display: block;
+  
+  @media #{$gt-sm} {
+    height: $btn-width-gt-sm;
+    width: $btn-width-gt-sm;
+  }
+}
+
+.close-btn:hover, .arrow:hover  { /* TODO: media hover */
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.close-btn:hover /deep/ .svg, .arrow:hover /deep/ .svg{ /* TODO: media hover */
+  fill: white;
 }
 
 .arrow {
   position: absolute;
+  top: $btn-width;
+  width: $btn-width;
+  height: calc(100vh - #{2 * $btn-width});
+  left: 0;
   display: block;
+  cursor: pointer;
+  background: transparent;
+  
+  @media #{$gt-sm} {
+    top: $btn-width-gt-sm;
+    width: $btn-width-gt-sm;
+    height: calc(100vh - #{2 * $btn-width-gt-sm});
+  }
 }
 
-.close-btn {
+.arrow-right {
+  left: auto;
+  right: 0;
+}
+
+.close-btn /deep/ .svg, .arrow /deep/ .svg {
   position: absolute;
-  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 2rem;
+}
+
+.arrow /deep/ .svg {
+  width: 2.5rem;
 }

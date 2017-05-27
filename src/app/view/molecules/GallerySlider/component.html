@@ -1,5 +1,9 @@
-<button (click)="onSlideChanged(-1)" class="arrow arrow-left" *ngIf="currentSlide !== 0" type="button"></button>
-<button (click)="onSlideChanged(1)" class="arrow arrow-right" *ngIf="currentSlide !== slides.length - 1" type="button"></button>
+<button (click)="onSlideChanged(-1)" class="arrow arrow-left" *ngIf="currentSlide !== 0" type="button">
+  <gp-chevron-left-icon></gp-chevron-left-icon>
+</button>
+<button (click)="onSlideChanged(1)" class="arrow arrow-right" *ngIf="currentSlide !== slides.length - 1" type="button">
+  <gp-chevron-right-icon></gp-chevron-right-icon>
+</button>
 <button class="close-btn" (click)="close.emit()" type="button">
   <gp-close-icon></gp-close-icon>
 </button>

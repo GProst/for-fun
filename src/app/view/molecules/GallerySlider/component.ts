@@ -65,7 +65,7 @@ export class GallerySliderMolecule implements OnChanges, OnInit, OnDestroy {
 
   setCurrentSlideClass() {
     return {
-      desktop: this.isDesktop(),
+      'desktop': this.isDesktop(),
       'slide_tall': this.isTall() && !this.isDesktop(),
       'slide_long': !this.isTall() && !this.isDesktop()
     }
