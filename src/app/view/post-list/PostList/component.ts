@@ -1,8 +1,12 @@
-import {Component} from '@angular/core'
+import {Component, Input} from '@angular/core'
+
+import {PostCardData} from '../PostCard/component'
 
 @Component({
-  selector: 'gp-header',
+  selector: 'gp-post-list',
   templateUrl: './component.html',
   styleUrls: ['./component.scss']
 })
-export class PostList {}
+export class PostList {
+  @Input() posts: Array<PostCardData>
+}

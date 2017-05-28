@@ -1,2 +1,6 @@
 @import "../../../sass-vars/breakpoints";
 
+:host {
+  display: flex;
+  justify-content: space-around;
+}
