@@ -9,14 +9,29 @@
 
 .slide {
   margin: auto;
+  max-width: 1920px;
 }
 
-.desktop {
-  width: 50vw;
+.gt-sm-slide {
+  width: 70vw;
   height: auto;
+  
+  @media #{$gt-md} {
+    width: 50vw;
+  }
 }
 
-$btn-width: 4rem;
+.slide_long {
+  width: 100vw;
+}
+
+.slide_tall /deep/ img {
+  height: 100vh;
+  width: auto;
+}
+
+$btn-width: 3rem;
+$btn-width-gt-xs: 4rem;
 $btn-width-gt-sm: 5rem;
 .close-btn {
   position: absolute;
@@ -28,18 +43,15 @@ $btn-width-gt-sm: 5rem;
   width: $btn-width;
   display: block;
   
+  @media #{$gt-xs} {
+    height: $btn-width-gt-xs;
+    width: $btn-width-gt-xs;
+  }
+  
   @media #{$gt-sm} {
     height: $btn-width-gt-sm;
     width: $btn-width-gt-sm;
   }
-}
-
-.close-btn:hover, .arrow:hover  { /* TODO: media hover */
-  background: rgba(0, 0, 0, 0.2);
-}
-
-.close-btn:hover /deep/ .svg, .arrow:hover /deep/ .svg{ /* TODO: media hover */
-  fill: white;
 }
 
 .arrow {
@@ -51,6 +63,12 @@ $btn-width-gt-sm: 5rem;
   display: block;
   cursor: pointer;
   background: transparent;
+  
+  @media #{$gt-xs} {
+    top: $btn-width-gt-xs;
+    width: $btn-width-gt-xs;
+    height: calc(100vh - #{2 * $btn-width-gt-xs});
+  }
   
   @media #{$gt-sm} {
     top: $btn-width-gt-sm;
@@ -74,4 +92,14 @@ $btn-width-gt-sm: 5rem;
 
 .arrow /deep/ .svg {
   width: 2.5rem;
+}
+
+@media (hover: hover) {
+  .close-btn:hover, .arrow:hover  { /* TODO: media hover */
+    background: rgba(0, 0, 0, 0.2);
+  }
+  
+  .close-btn:hover /deep/ .svg, .arrow:hover /deep/ .svg{ /* TODO: media hover */
+    fill: white;
+  }
 }

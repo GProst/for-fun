@@ -33,7 +33,7 @@ export class GallerySliderMolecule implements OnChanges, OnInit, OnDestroy {
   }
 
   private setCurrentSlideType() {
-    if (!this.isDesktop()) {
+    if (!this.isGTSM()) {
       const {heightCoeff, widthCoeff} = this.slides[this.currentSlide].aspectRatio
       const slideAspectRatio = heightCoeff / widthCoeff
       const viewportAspectRatio = window.innerHeight / window.innerWidth
@@ -47,7 +47,9 @@ export class GallerySliderMolecule implements OnChanges, OnInit, OnDestroy {
 
   private setCurrentSlideSizesAttr() {
     let sizes = '50vw' // desktop
-    if (!this.isDesktop()) {
+    if (this.isGTSM() && !this.isGTMD()) {
+      sizes = '70vw' // small desktop or large tablet
+    } else if (!this.isGTSM()) {
       if (this.currentSlideProportions === 'long') {
         sizes = '100vw'
       // if slide height will be 100vh (tall)
@@ -55,7 +57,7 @@ export class GallerySliderMolecule implements OnChanges, OnInit, OnDestroy {
         const {heightCoeff, widthCoeff} = this.slides[this.currentSlide].aspectRatio
         const slideViewportHightsCoeff = window.innerHeight / heightCoeff
         const slideWidth = widthCoeff * slideViewportHightsCoeff
-        const slideWidthPercentage = Math.round(100 * (window.innerWidth / slideWidth)) // integer
+        const slideWidthPercentage = Math.round(100 * (slideWidth / window.innerWidth)) // integer
         sizes = `${slideWidthPercentage}vw`
       }
     }
@@ -65,14 +67,18 @@ export class GallerySliderMolecule implements OnChanges, OnInit, OnDestroy {
 
   setCurrentSlideClass() {
     return {
-      'desktop': this.isDesktop(),
-      'slide_tall': this.isTall() && !this.isDesktop(),
-      'slide_long': !this.isTall() && !this.isDesktop()
+      'gt-sm-slide': this.isGTSM(),
+      'slide_tall': this.isTall() && !this.isGTSM(),
+      'slide_long': !this.isTall() && !this.isGTSM()
     }
   }
 
-  private isDesktop() {
-    return window.innerWidth >= 800
+  private isGTSM() {
+    return window.innerWidth >= 960 // see breakpoint table (TODO: wiki link)
+  }
+
+  private isGTMD() {
+    return window.innerWidth >= 1280 // see breakpoint table (TODO: wiki link)
   }
 
   private isTall() {
