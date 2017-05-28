@@ -1,7 +1,5 @@
 import {NgModule} from '@angular/core'
 import {BrowserModule} from '@angular/platform-browser'
-import {AngularMaterialModule} from '../third-party/angular-material/module'
-import {FlexLayoutModule} from '@angular/flex-layout'
 
 import {TwitterIcon} from './@icon@Twitter/component'
 import {StackOverflowIcon} from './@icon@StackOverflow/component'
@@ -14,13 +12,11 @@ import {ChevronRightIcon} from './@icon@ChevronRight/component'
 
 @NgModule({
   declarations: [
-    TwitterIcon, StackOverflowIcon, GitHybIconIcon, LinkedInIcon, Image, CloseIcon,
-    ChevronLeftIcon, ChevronRightIcon
+    TwitterIcon, StackOverflowIcon, GitHybIconIcon, LinkedInIcon, Image, CloseIcon, ChevronLeftIcon, ChevronRightIcon
   ],
-  imports: [BrowserModule, AngularMaterialModule, FlexLayoutModule],
+  imports: [BrowserModule],
   exports: [
-    BrowserModule, AngularMaterialModule, FlexLayoutModule, TwitterIcon, StackOverflowIcon, GitHybIconIcon,
-    LinkedInIcon, Image, CloseIcon, ChevronLeftIcon, ChevronRightIcon
+    TwitterIcon, StackOverflowIcon, GitHybIconIcon, LinkedInIcon, Image, CloseIcon, ChevronLeftIcon, ChevronRightIcon
   ]
 })
 export class CommonBricksModule {}
