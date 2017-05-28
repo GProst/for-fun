@@ -1,0 +1,19 @@
+@import "../../../sass-vars/palette-colors";
+
+.svg {
+  width: auto;
+  height: 100%;
+  cursor: pointer;
+}
+
+.container {
+  fill: white;
+}
+
+.svg:hover .container {
+  fill: $accent;
+}
+
+.letter {
+  fill: $primary;
+}

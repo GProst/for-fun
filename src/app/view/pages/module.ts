@@ -1,13 +1,14 @@
 import {NgModule} from '@angular/core'
 
-import {OrganismsModule} from '../organisms/module'
+import {PostModule} from '../post/module'
+// import {PostList} from '../post-list/module'
 
 import {PostsPage} from './Posts/component'
 import {AboutPage} from './About/component'
 
 @NgModule({
-  imports: [OrganismsModule],
+  imports: [PostModule],
   declarations: [PostsPage, AboutPage],
-  exports: [OrganismsModule]
+  exports: [PostModule]
 })
 export class PagesModule {}

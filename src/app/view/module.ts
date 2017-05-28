@@ -1,10 +1,12 @@
 import {NgModule} from '@angular/core'
 
 import {PagesModule} from './pages/module'
-import {ViewServicesModule} from './services/module'
+import {GallerySliderModule} from './gallery-slider/module'
+import {DataServicesModule} from './data-services/module'
+import {SharedComponentsModule} from './shared/module'
 
 @NgModule({
-  imports: [PagesModule, ViewServicesModule],
-  exports: [PagesModule, ViewServicesModule]
+  imports: [PagesModule, DataServicesModule, GallerySliderModule, SharedComponentsModule],
+  exports: [PagesModule, DataServicesModule, GallerySliderModule, SharedComponentsModule]
 })
 export class ViewModule {}

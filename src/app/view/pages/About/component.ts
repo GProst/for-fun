@@ -2,7 +2,7 @@ import {Component, HostBinding} from '@angular/core'
 
 import {slideFromToRight} from './animations'
 
-import {PostData} from '../../organisms/Post/component'
+import {PostData} from '../../post/Post/component'
 
 import {postData} from './content'
 
