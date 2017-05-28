@@ -5,4 +5,8 @@ import {Component} from '@angular/core'
   templateUrl: './component.html',
   styleUrls: ['./component.scss']
 })
-export class Footer {}
+export class Footer {
+  isGTXS() {
+    return window.innerWidth >= 600
+  }
+}

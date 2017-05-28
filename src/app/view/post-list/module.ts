@@ -3,12 +3,11 @@ import {BrowserModule} from '@angular/platform-browser'
 
 import {CommonBricksModule} from '../common-bricks/module'
 import {AngularMaterialModule} from '../third-party/angular-material/module'
-import {Footer} from './Footer/component'
-import {Header} from './Header/component'
+import {PostList} from './PostList/component'
 
 @NgModule({
-  declarations: [Footer, Header],
+  declarations: [PostList],
   imports: [BrowserModule, AngularMaterialModule, CommonBricksModule],
-  exports: [Footer, Header]
+  exports: [PostList]
 })
-export class SharedComponentsModule {}
+export class PostListModule {}

@@ -1,5 +1,3 @@
-// This module is imported in atoms/module.ts and then inherited in app ViewModule (atoms->molecules->templates)
-
 import {NgModule} from '@angular/core'
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 import {MdToolbarModule, MdButtonModule, MdTooltipModule} from '@angular/material'
