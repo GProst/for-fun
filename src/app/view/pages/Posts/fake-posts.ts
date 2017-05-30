@@ -16,7 +16,7 @@ export const posts = [
       srcSet: 'http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg 1x',
       alt: 'post thumbnail'
     },
-    title: 'Test Post 2 with a very long title.',
+    title: 'Test Post 2 with a very long title',
     description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet architecto aspernatur 
     blanditiis consequatur corporis cum dignissimos esse eum ipsa ipsam.`
   },

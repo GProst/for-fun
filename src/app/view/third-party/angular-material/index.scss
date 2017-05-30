@@ -44,10 +44,6 @@ $gprostV1-app-theme: mat-light-theme($gprostV1-app-primary, $gprostV1-app-accent
   line-height: 33px !important;
 }
 
-//revert button style
-.mat-raised-button.revert, .mat-fab.revert, .mat-mini-fab.revert {
-  background-color: white;
-  color: $accent;
-  box-shadow: none;
+.mat-button.mat-accent {
   text-transform: uppercase;
 }
