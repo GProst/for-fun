@@ -1,7 +1,0 @@
-<button (click)="onSlideChanged(-1)" class="arrow arrow-left" *ngIf="currentSlide !== 0" type="button"></button>
-<button (click)="onSlideChanged(1)" class="arrow arrow-right" *ngIf="currentSlide !== slides.length - 1" type="button"></button>
-<button class="close-btn" (click)="close.emit()" type="button">
-  <gp-close-icon></gp-close-icon>
-</button>
-
-<gp-img [ngClass]="setCurrentSlideClass()" class="slide" [content]="slides[currentSlide]"></gp-img>

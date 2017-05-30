@@ -1,13 +1,15 @@
 import {NgModule} from '@angular/core'
+import {BrowserModule} from '@angular/platform-browser'
 
-import {OrganismsModule} from '../organisms/module'
+import {PostModule} from '../post/module'
+import {PostListModule} from '../post-list/module'
 
 import {PostsPage} from './Posts/component'
 import {AboutPage} from './About/component'
 
 @NgModule({
-  imports: [OrganismsModule],
+  imports: [BrowserModule, PostModule, PostListModule],
   declarations: [PostsPage, AboutPage],
-  exports: [OrganismsModule]
+  exports: [PostModule]
 })
 export class PagesModule {}

@@ -1,0 +1,49 @@
+@import "../../../sass-vars/breakpoints";
+@import "../../../sass-vars/palette-colors";
+
+// Angular Material theming
+@import '../../../../../node_modules/@angular/material/theming';
+@include mat-core();
+
+$gprostV1-app-primary: mat-palette($mat-amber);
+$gprostV1-app-accent:  mat-palette($mat-deep-orange, 800, 600, 900);
+
+$gprostV1-app-theme: mat-light-theme($gprostV1-app-primary, $gprostV1-app-accent);
+
+@include angular-material-theme($gprostV1-app-theme);
+
+
+// Custom style overrides
+.mat-button, .mat-fab, .mat-icon-button, .mat-mini-fab, .mat-raised-button {
+  font-size: 12px !important;
+  
+  @media #{$gt-xs} {
+    font-size: 14px !important;
+  }
+}
+
+.mat-button, .mat-raised-button {
+  min-width: 65px !important;
+  padding: 0 12px !important;
+  line-height: 31px !important;
+  
+  @media #{$gt-xs} {
+    min-width: 88px !important;
+    padding: 0 16px !important;
+    line-height: 36px !important;
+  }
+}
+
+.mat-toolbar {
+  box-shadow: 0 1px 8px 1px rgba(100, 100, 100, 0.6);
+}
+
+.mat-icon-button {
+  width: 33px !important;
+  height: 33px !important;
+  line-height: 33px !important;
+}
+
+.mat-button.mat-accent {
+  text-transform: uppercase;
+}

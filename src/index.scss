@@ -1,6 +1,6 @@
 @import '~normalize.css';
-@import './sass-vars/breakpoints';
-@import './sass-vars/palette-colors';
+@import 'app/sass-vars/breakpoints';
+@import 'app/sass-vars/palette-colors';
 
 // Global styles
 
@@ -24,4 +24,9 @@ img {
 
 h1 {
   margin: 0;
+}
+
+button {
+  outline: none;
+  border: none;
 }
