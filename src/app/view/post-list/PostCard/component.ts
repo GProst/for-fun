@@ -19,7 +19,6 @@ export class PostCard implements OnChanges {
   thumbnail: ImageContent
   title: string
   description: string
-  dateOfCreation: string
 
   ngOnChanges() {
     this.thumbnail = this.content.thumbnail

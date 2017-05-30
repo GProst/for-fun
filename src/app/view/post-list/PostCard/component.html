@@ -1,4 +1,14 @@
 <gp-img class="thumbnail" [content]="thumbnail"></gp-img>
-<h2>{{title}}</h2>
-<p>{{description}}</p>
-<p>{{dateOfCreation}}</p>
+<div class="text-container">
+  <h2 class="title">{{title}}</h2>
+  <p class="paragraph">{{description}}</p>
+</div>
+<div class="actions-container">
+  <button
+    md-raised-button
+    color="accent"
+    class="revert"
+  >
+    Learn more
+  </button>
+</div>

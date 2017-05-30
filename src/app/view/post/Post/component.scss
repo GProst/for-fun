@@ -50,10 +50,16 @@ $text-side-padding: 3rem;
 .single-img {
   width: 100%;
   display: block;
+  margin: 3rem 0;
+}
+
+.gallery {
+  margin: 3rem 0;
 }
 
 .subtitle {
   padding: 0 $text-side-padding;
+  margin: 2.5rem 0 1rem;
   @media #{$gt-xs} {
     text-align: center;
   }
