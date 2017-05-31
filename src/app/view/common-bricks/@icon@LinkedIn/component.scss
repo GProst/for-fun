@@ -10,10 +10,12 @@
   fill: white;
 }
 
-.svg:hover .container {
-  fill: $accent;
-}
-
 .letter {
   fill: $primary;
+}
+
+@media (hover: hover) {
+  .svg:hover .container {
+    fill: $accent;
+  }
 }

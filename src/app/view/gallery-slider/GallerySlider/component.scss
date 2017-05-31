@@ -95,11 +95,11 @@ $btn-width-gt-sm: 5rem;
 }
 
 @media (hover: hover) {
-  .close-btn:hover, .arrow:hover  { /* TODO: media hover */
+  .close-btn:hover, .arrow:hover  {
     background: rgba(0, 0, 0, 0.2);
   }
   
-  .close-btn:hover /deep/ .svg, .arrow:hover /deep/ .svg{ /* TODO: media hover */
+  .close-btn:hover /deep/ .svg, .arrow:hover /deep/ .svg{
     fill: white;
   }
 }
