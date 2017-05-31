@@ -4,7 +4,6 @@ $text-side-padding: 1.4rem;
 
 
 :host {
-  margin: 0 1rem;
   background: white;
   cursor: pointer;
   flex: 1 1 25%;
@@ -12,13 +11,32 @@ $text-side-padding: 1.4rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin: 1rem 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+  
+  @media #{$sm} {
+    margin: 0 0.4rem;
+  
+    &:nth-child(2) {
+      margin: 0;
+    }
+  }
+  
+  @media #{$gt-sm} {
+    margin: 0 1rem;
+  }
 }
 
 .thumbnail {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  height: 10rem;
+  height: 13rem;
+  
+  @media #{$gt-xs} {
+    height: 10rem
+  };
 }
 
 .thumbnail /deep/ img {
@@ -40,18 +58,26 @@ $text-side-padding: 1.4rem;
 .title {
   font-weight: 400;
   color: #444444;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   line-height: 1.9rem;
   margin: 1.7rem 0 1.9rem;
   padding-bottom: 0.5rem;
   border-bottom: 2px solid $primary-dark;
+  
+  @media #{$gt-sm} {
+    font-size: 1.4rem;
+  }
 }
 
 .paragraph {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   line-height: 1.4rem;
   padding: 0;
   color: #888888;
+  
+  @media #{$gt-sm} {
+    font-size: 0.8rem;
+  }
 }
 
 .actions-container {
