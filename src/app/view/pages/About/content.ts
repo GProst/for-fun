@@ -3,7 +3,9 @@ export const postData = {
   frontImage: {
     src: 'https://cdn-images-1.medium.com/max/2000/1*DOh8hikbDKQbziSE-LWKJg.jpeg',
     srcSet: 'https://cdn-images-1.medium.com/max/2000/1*DOh8hikbDKQbziSE-LWKJg.jpeg 1x',
-    alt: 'tstFrontImage'
+    alt: 'tstFrontImage',
+    heightCoeff: 700,
+    widthCoeff: 1086
   },
   mainContent: [
     {
