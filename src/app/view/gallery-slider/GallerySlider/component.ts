@@ -1,5 +1,7 @@
 import {Component, Input, Output, OnChanges, OnInit, OnDestroy, EventEmitter} from '@angular/core'
 
+import {BreakpointsService} from '../../services/breakpoints.service'
+
 import {ImageContent} from '../../common-bricks/Image/component'
 
 export interface Slide extends ImageContent {
@@ -26,6 +28,13 @@ export class GallerySlider implements OnChanges, OnInit, OnDestroy {
   currentSlide: number
   slides: Array<Slide>
   currentSlideProportions: string
+  isGTSM: () => boolean
+  isGTMD: () => boolean
+
+  constructor(private breakpointsService: BreakpointsService) {
+    this.isGTSM = breakpointsService.isGTSM
+    this.isGTMD = breakpointsService.isGTMD
+  }
 
   private setCurrentSlideProps = () => {
     this.setCurrentSlideType()
@@ -71,14 +80,6 @@ export class GallerySlider implements OnChanges, OnInit, OnDestroy {
       'slide_tall': this.isTall() && !this.isGTSM(),
       'slide_long': !this.isTall() && !this.isGTSM()
     }
-  }
-
-  private isGTSM() {
-    return window.innerWidth >= 960 // see breakpoint table (TODO: wiki link)
-  }
-
-  private isGTMD() {
-    return window.innerWidth >= 1280 // see breakpoint table (TODO: wiki link)
   }
 
   private isTall() {

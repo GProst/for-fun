@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core'
 
 import {PagesModule} from './pages/module'
 import {GallerySliderModule} from './gallery-slider/module'
-import {DataServicesModule} from './data-services/module'
+import {DataServicesModule} from './services/module'
 import {SharedComponentsModule} from './shared/module'
 
 @NgModule({
