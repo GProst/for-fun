@@ -1,4 +1,5 @@
-import {Component, Input, OnChanges} from '@angular/core'
+import {Component, Input, OnChanges, HostListener} from '@angular/core'
+import {Router} from '@angular/router'
 
 import {ImageContent} from '../../common-bricks/Image/component'
 
@@ -20,10 +21,18 @@ export class PostCard implements OnChanges {
   thumbnail: ImageContent
   title: string
   description: string
+  slug: string
+
+  constructor(private router: Router) {}
+
+  @HostListener('click') onPostCardClick() {
+    this.router.navigate(['/posts', this.slug])
+  }
 
   ngOnChanges() {
     this.thumbnail = this.content.thumbnail
     this.title = this.content.title
     this.description = this.content.description
+    this.slug = this.content.slug
   }
 }

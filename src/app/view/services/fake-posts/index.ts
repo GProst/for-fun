@@ -38,6 +38,6 @@ export const postCards = [
 export const posts = {
   'about': require('./about').postData,
   'adventure-time': require('./post-1').postData,
-  'long-title-post': require('./post-1').postData,
+  'long-title-post': require('./post-2').postData,
   'another-post': require('./post-3').postData
 }
