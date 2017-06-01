@@ -7,6 +7,7 @@ import {PostPage} from './view/pages/Post/component'
 
 const appRoutes: Routes = [
   {path: 'posts', component: PostsPage},
+  {path: 'posts/page/:pageNumber', component: PostsPage},
   {path: 'about', component: AboutPage},
   {path: 'posts/:slug', component: PostPage},
   {path: '**', redirectTo: '/posts', pathMatch: 'full'}

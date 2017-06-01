@@ -1,10 +1,12 @@
 import {Component, HostBinding} from '@angular/core'
+import {ActivatedRoute, Params} from '@angular/router'
 
 import {slideFromToLeft} from './animations'
 
 import {PostCardData} from '../../post-list/PostCard/component'
 
 import {PostsService} from '../../services/posts.service'
+import {CacheService} from '../../../cache/cache.service'
 
 @Component({
   selector: 'gp-posts-page',
@@ -18,15 +20,16 @@ export class PostsPage {
   posts: Array<PostCardData> = []
   fetchingPosts: boolean = true
 
-  fetchPosts(pageNumber: number) {
-    this.postsService.fetchPosts(pageNumber) // TODO:get page number from route state
-      .then(posts => {
-        this.posts = posts // TODO: if no posts yet -> show loader
-        this.fetchingPosts = false
+  constructor(private postsService: PostsService, private cacheService: CacheService, private route: ActivatedRoute) {
+    this.route.params
+      .subscribe(async (params: Params) => {
+        const {pageNumber} = params
+        this.getPosts(pageNumber || 1) // default is first page
       })
   }
 
-  constructor(private postsService: PostsService) {
-    this.fetchPosts(1) // TODO: fetch posts only if they are not in cache
+  async getPosts(pageNumber: number) {
+    this.posts = this.cacheService.getPagePosts(pageNumber) || await this.postsService.fetchPosts(pageNumber)
+    this.fetchingPosts = false
   }
 }

@@ -7,4 +7,4 @@ import {PostsService} from './posts.service'
 @NgModule({
   providers: [GallerySliderService, BreakpointsService, PostsService]
 })
-export class DataServicesModule {}
+export class ViewServicesModule {}

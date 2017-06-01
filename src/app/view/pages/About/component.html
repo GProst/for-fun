@@ -1,3 +1,4 @@
 <div class="page-content">
-  <gp-post *ngIf="postData" [postData]="postData"></gp-post>
+  <gp-loader *ngIf="loading"></gp-loader>
+  <gp-post *ngIf="postData && !loading" [postData]="postData"></gp-post>
 </div>

@@ -10,6 +10,7 @@ interface FrontImage extends ImageContent {
 
 export interface PostData {
   title: string,
+  slug: string,
   frontImage: FrontImage,
   mainContent: PostMainContent
 }
