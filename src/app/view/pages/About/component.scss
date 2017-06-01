@@ -1,8 +1,13 @@
 @import '../../../sass-vars/header';
 @import '../../../sass-vars/footer';
 @import '../../../sass-vars/breakpoints';
+@import '../../../sass-vars/page-container';
 
 :host {
+  @include page-container();
+}
+
+.page-content {
   display: block;
   position: relative;
   max-width: 960px;

@@ -46,4 +46,9 @@ $gprostV1-app-theme: mat-light-theme($gprostV1-app-primary, $gprostV1-app-accent
 
 .mat-button.mat-accent {
   text-transform: uppercase;
+  background: rgba(216, 67, 21, 0.05) !important;
+  
+  @media (hover: hover) {
+    background: transparent !important;
+  }
 }

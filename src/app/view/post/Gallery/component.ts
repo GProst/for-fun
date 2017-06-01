@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core'
 
-import {GallerySliderService} from '../../data-services/gallery-slider.service'
+import {GallerySliderService} from '../../services/gallery-slider.service'
 
 import {Slide} from '../../gallery-slider/GallerySlider/component'
 

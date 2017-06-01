@@ -3,9 +3,14 @@ import {Component, Input, OnChanges, OnInit, OnDestroy, ElementRef} from '@angul
 import {ImageContent} from '../../common-bricks/Image/component'
 import {Slide} from '../../gallery-slider/GallerySlider/component'
 
+interface FrontImage extends ImageContent {
+  heightCoeff: number,
+  widthCoeff: number
+}
+
 export interface PostData {
   title: string,
-  frontImage: ImageContent,
+  frontImage: FrontImage,
   mainContent: PostMainContent
 }
 
@@ -37,16 +42,17 @@ type PostVideo = {
   styleUrls: ['./component.scss']
 })
 export class Post implements OnChanges, OnInit, OnDestroy {
-  private frontImageElem: HTMLImageElement
+  private frontImageAspectRatio: number
 
   @Input() postData: PostData
 
   title: string
-  frontImage: ImageContent
+  frontImage: FrontImage
   mainContent: PostMainContent
 
   frontImageContainerStyles: object
   articleStyles: object
+  frontImageHeight: number
 
   constructor(private elem: ElementRef) {
     this.frontImageContainerStyles = {
@@ -59,14 +65,15 @@ export class Post implements OnChanges, OnInit, OnDestroy {
     const winWidth = window.innerWidth
     const frontImageLeftPos = (winWidth - postContainerWidth) / 2
     this.frontImageContainerStyles = {
-      left: `-${frontImageLeftPos}px`
+      left: `-${frontImageLeftPos}px`,
+      height: `${this.frontImageHeight}px`
     }
   }
 
   // article lies on 1/4 of frontImage
   setArticlePosition = () => {
-    const frontImageHeight = this.frontImageElem.clientHeight
-    const marginTop = frontImageHeight * 0.25
+    this.frontImageHeight = window.innerWidth * this.frontImageAspectRatio // frontImage width === window.innerWidth
+    const marginTop = this.frontImageHeight * 0.25
     this.articleStyles = {
       marginTop: `-${marginTop}px`
     }
@@ -77,11 +84,9 @@ export class Post implements OnChanges, OnInit, OnDestroy {
     this.frontImage = this.postData.frontImage
     this.mainContent = this.postData.mainContent
 
-    this.frontImageElem = this.elem.nativeElement.querySelector('.front-image-container img')
-    this.frontImageElem.onload = () => {
-      this.setArticlePosition()
-      window.addEventListener('resize', this.setArticlePosition)
-    }
+    this.frontImageAspectRatio = this.frontImage.heightCoeff / this.frontImage.widthCoeff
+    this.setArticlePosition()
+    window.addEventListener('resize', this.setArticlePosition)
   }
 
   ngOnInit() {
