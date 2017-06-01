@@ -20,18 +20,20 @@ export class CacheService {
     this.cachedPosts.push(post)
   }
 
-  getPost(slug: string) {
+  getPost(slug: string): PostData {
     return this.cachedPosts.find(post => post.slug === slug)
   }
 
-  cachePostsPage(pageNumber: number, postList: Array<PostCardData>) {
+  cachePagePosts(pageNumber: number, postList: Array<PostCardData>) {
     if (this.cachedPostsPages.length > 10) { // do not cache too many
       this.cachedPostsPages.shift()
     }
     this.cachedPostsPages.push({pageNumber, postList})
   }
 
-  getPostsPage(pageNumber: number) {
-    return this.cachedPostsPages.find(postsPage => postsPage.pageNumber === pageNumber)
+  getPagePosts(pageNumber: number): Array<PostCardData> {
+    const cachedPage = this.cachedPostsPages.find(postsPage => postsPage.pageNumber === pageNumber)
+    const cachePagePosts = cachedPage ? cachedPage.postList : undefined
+    return cachePagePosts
   }
 }

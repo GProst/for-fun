@@ -1,3 +1,4 @@
 <div class="page-content">
-  <gp-post-list [posts]="posts"></gp-post-list>
+  <gp-loader *ngIf="fetchingPosts"></gp-loader>
+  <gp-post-list *ngIf="posts && !fetchingPosts" [posts]="posts"></gp-post-list>
 </div>
