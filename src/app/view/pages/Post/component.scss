@@ -1,0 +1,24 @@
+@import '../../../sass-vars/header';
+@import '../../../sass-vars/footer';
+@import '../../../sass-vars/breakpoints';
+@import '../../../sass-vars/page-container';
+
+:host {
+  @include page-container();
+}
+
+.page-content {
+  display: block;
+  position: relative;
+  max-width: 960px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  min-height: calc(100vh - #{$header-height-xs} - #{$footer-height-xs});
+  
+  @media #{$gt-xs} {
+    min-height: calc(100vh - #{$header-height-gt-xs} - #{$footer-height-gt-xs});
+    padding: 0 4rem;
+  }
+}

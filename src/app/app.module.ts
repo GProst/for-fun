@@ -8,6 +8,6 @@ import {AppComponent} from './app.component'
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [AppComponent],
-  imports: [ViewModule, RoutingModule]
+  imports: [RoutingModule, ViewModule]
 })
 export class AppModule {}
