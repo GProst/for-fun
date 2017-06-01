@@ -5,7 +5,8 @@ import {ImageContent} from '../../common-bricks/Image/component'
 export interface PostCardData {
   thumbnail: ImageContent,
   title: string,
-  description: string
+  description: string,
+  slug: string
 }
 
 @Component({

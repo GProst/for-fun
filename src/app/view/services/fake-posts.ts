@@ -8,7 +8,8 @@ export const posts = [
     },
     title: 'Adventure Time Post',
     description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet architecto aspernatur 
-    blanditiis consequatur corporis cum dignissimos esse eum ipsa ipsam.`
+    blanditiis consequatur corporis cum dignissimos esse eum ipsa ipsam.`,
+    slug: 'adventure-time'
   },
   {
     thumbnail: {
@@ -18,7 +19,8 @@ export const posts = [
     },
     title: 'Test Post 2 with a very long title',
     description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet architecto aspernatur 
-    blanditiis consequatur corporis cum dignissimos esse eum ipsa ipsam.`
+    blanditiis consequatur corporis cum dignissimos esse eum ipsa ipsam.`,
+    slug: 'long-title-post'
   },
   {
     thumbnail: {
@@ -28,6 +30,7 @@ export const posts = [
     },
     title: 'Test Post 3',
     description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet architecto aspernatur 
-    blanditiis consequatur corporis.`
+    blanditiis consequatur corporis.`,
+    slug: 'another-post'
   }
 ]
