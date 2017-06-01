@@ -1,4 +1,5 @@
 import {Component, HostBinding} from '@angular/core'
+import {ActivatedRoute, Params} from '@angular/router'
 
 import {slideFromToLeft} from './animations'
 
@@ -19,8 +20,12 @@ export class PostsPage {
   posts: Array<PostCardData> = []
   fetchingPosts: boolean = true
 
-  constructor(private postsService: PostsService, private cacheService: CacheService) {
-    this.getPosts(1) // TODO:get page number from route state
+  constructor(private postsService: PostsService, private cacheService: CacheService, private route: ActivatedRoute) {
+    this.route.params
+      .subscribe(async (params: Params) => {
+        const {pageNumber} = params
+        this.getPosts(pageNumber || 1) // default is first page
+      })
   }
 
   async getPosts(pageNumber: number) {
