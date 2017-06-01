@@ -1,4 +1,4 @@
-export const posts = [
+export const postCards = [
   {
     thumbnail: {
       src: 'http://prismmediaproduction.com/wp-content/uploads/2015/07/c15568f5-e2bd-4130-92c3-daa02f1f337a_orig.png',
@@ -34,3 +34,10 @@ export const posts = [
     slug: 'another-post'
   }
 ]
+
+export const posts = {
+  'about': require('./about').postData,
+  'adventure-time': require('./post-1').postData,
+  'long-title-post': require('./post-1').postData,
+  'another-post': require('./post-3').postData
+}

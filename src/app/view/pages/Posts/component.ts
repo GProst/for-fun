@@ -15,7 +15,7 @@ import {PostsService} from '../../services/posts.service'
 export class PostsPage {
   @HostBinding('@routeAnimation') routeAnimation = true
 
-  posts: Array<PostCardData>
+  posts: Array<PostCardData> = []
   fetchingPosts: boolean = true
 
   fetchPosts(pageNumber: number) {
