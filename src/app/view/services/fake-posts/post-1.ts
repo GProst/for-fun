@@ -1,5 +1,6 @@
 export const postData = {
   title: 'Adventure time post!',
+  slug: 'adventure-time',
   frontImage: {
     src: 'https://cdn-images-1.medium.com/max/2000/1*DOh8hikbDKQbziSE-LWKJg.jpeg',
     srcSet: 'https://cdn-images-1.medium.com/max/2000/1*DOh8hikbDKQbziSE-LWKJg.jpeg 1x',

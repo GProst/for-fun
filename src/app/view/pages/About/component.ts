@@ -5,6 +5,7 @@ import {slideFromToRight} from './animations'
 import {PostData} from '../../post/Post/component'
 
 import {PostsService} from '../../services/posts.service'
+import {CacheService} from '../../../cache/cache.service'
 
 @Component({
   selector: 'gp-about-page',
@@ -16,13 +17,14 @@ export class AboutPage {
   @HostBinding('@routeAnimation') routeAnimation = true
 
   postData: PostData
-  loading: boolean = true // TODO: create PostLoader or Loader component
+  loading: boolean = true
 
-  constructor(private postsService: PostsService) {
-      postsService.fetchPost('about') // TODO: only if not in cache
-        .then(post => {
-          this.postData = post
-          this.loading = false
-        })
+  constructor(private postsService: PostsService, private cacheService: CacheService) {
+      this.getPostData()
+  }
+
+  async getPostData() {
+    this.postData = this.cacheService.getPost('about') || await this.postsService.fetchPost('about')
+    this.loading = false
   }
 }
