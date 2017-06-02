@@ -1,7 +1,7 @@
 import { animate, AnimationEntryMetadata, state, style, transition, trigger } from '@angular/core'
 
-export const slideFromToRight: AnimationEntryMetadata =
-  trigger('routeAnimation', [
+export const slideFromRight: AnimationEntryMetadata =
+  trigger('enterAnimation', [
     state('*',
       style({
         opacity: 1,
@@ -14,15 +14,5 @@ export const slideFromToRight: AnimationEntryMetadata =
         transform: 'translateX(100%)'
       }),
       animate('0.3s 0.2s ease-in')
-    ]),
-    transition(':leave', [
-      style({
-        position: 'absolute',
-        top: 0,
-      }),
-      animate('0.3s ease-out', style({
-        opacity: 0,
-        transform: 'translateX(100%)'
-      }))
     ])
   ])
