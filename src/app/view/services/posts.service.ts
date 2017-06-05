@@ -15,7 +15,7 @@ export class PostsService {
   fetchPosts(pageNumber: number): Promise<ArrayOfPostCards> {
     return new Promise((resolve) => {
       this.cacheService.cachePagePosts(pageNumber, postCards)
-      setTimeout(() => resolve(postCards), 2000)
+      setTimeout(() => resolve(postCards), 1000)
     }) // TODO: server request
   }
 
@@ -23,7 +23,7 @@ export class PostsService {
     return new Promise((resolve) => {
       const post = posts[slug]
       this.cacheService.cachePost(post)
-      setTimeout(() => resolve(post), 2000)
+      setTimeout(() => resolve(post), 1000)
     }) // TODO: server request
   }
 }
