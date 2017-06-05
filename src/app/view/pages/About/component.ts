@@ -1,6 +1,6 @@
 import {Component, HostBinding} from '@angular/core'
 
-import {slideAway} from '../Post/post-page-animations'
+import {slideToRight} from '../Post/post-page-animations'
 
 import {PostData} from '../../post/Post/component'
 
@@ -11,10 +11,10 @@ import {CacheService} from '../../../cache/cache.service'
   selector: 'gp-about-page',
   templateUrl: './component.html',
   styleUrls: ['./component.scss'],
-  animations: [slideAway]
+  animations: [slideToRight]
 })
 export class AboutPage {
-  @HostBinding('@routeAnimation') routeAnimation = 'to-left'
+  @HostBinding('@routeAnimation') routeAnimation = true
 
   postData: PostData
   loading: boolean = true
