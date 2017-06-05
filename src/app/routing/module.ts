@@ -1,9 +1,11 @@
 import {NgModule} from '@angular/core'
 import {RouterModule, Routes} from '@angular/router'
 
-import {PostsPage} from './view/pages/Posts/component'
-import {AboutPage} from './view/pages/About/component'
-import {PostPage} from './view/pages/Post/component'
+import {RoutingService} from './routing.service'
+
+import {PostsPage} from '../view/pages/Posts/component'
+import {AboutPage} from '../view/pages/About/component'
+import {PostPage} from '../view/pages/Post/component'
 
 const appRoutes: Routes = [
   {path: 'posts', component: PostsPage},
@@ -14,6 +16,7 @@ const appRoutes: Routes = [
 ]
 
 @NgModule({
+  providers: [RoutingService],
   imports: [
     RouterModule.forRoot(appRoutes)
   ],

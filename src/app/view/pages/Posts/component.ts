@@ -1,7 +1,7 @@
 import {Component, HostBinding} from '@angular/core'
 import {ActivatedRoute, Params} from '@angular/router'
 
-import {slideFromToLeft} from './animations'
+import {slideAway} from './animations'
 
 import {PostCardData} from '../../post-list/PostCard/component'
 
@@ -12,7 +12,7 @@ import {CacheService} from '../../../cache/cache.service'
   selector: 'gp-posts-page',
   templateUrl: './component.html',
   styleUrls: ['./component.scss'],
-  animations: [slideFromToLeft]
+  animations: [slideAway]
 })
 export class PostsPage {
   @HostBinding('@routeAnimation') routeAnimation = true

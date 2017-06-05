@@ -10,16 +10,17 @@ import {CloseIcon} from './@icon@Close/component'
 import {ChevronLeftIcon} from './@icon@ChevronLeft/component'
 import {ChevronRightIcon} from './@icon@ChevronRight/component'
 import {Loader} from './Loader/component'
+import {PostContainer} from './PostContainer/component'
 
 @NgModule({
   declarations: [
     TwitterIcon, StackOverflowIcon, GitHybIconIcon, LinkedInIcon, Image, CloseIcon, ChevronLeftIcon, ChevronRightIcon,
-    Loader
+    Loader, PostContainer
   ],
   imports: [BrowserModule],
   exports: [
     TwitterIcon, StackOverflowIcon, GitHybIconIcon, LinkedInIcon, Image, CloseIcon, ChevronLeftIcon, ChevronRightIcon,
-    Loader
+    Loader, PostContainer
   ]
 })
 export class CommonBricksModule {}

@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core'
 
-import {RoutingModule} from './app.routing.module'
+import {RoutingModule} from './routing/module'
 import {ViewModule} from './view/module'
 import {CacheModule} from './cache/module'
 
