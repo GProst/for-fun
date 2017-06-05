@@ -75,6 +75,7 @@ const config = {
       template: './index.html',
       filename: 'index.html',
       inject: 'body',
+      favicon: './favicon.ico',
       cashe: true,
       showErrors: true
     }),

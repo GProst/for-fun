@@ -1,4 +1,7 @@
 import {Component, HostBinding} from '@angular/core'
+import {Title} from '@angular/platform-browser'
+
+import {CONSTANTS} from '../../../constants'
 
 import {slideToRight} from '../Post/post-page-animations'
 
@@ -19,8 +22,9 @@ export class AboutPage {
   postData: PostData
   loading: boolean = true
 
-  constructor(private postsService: PostsService, private cacheService: CacheService) {
-      this.getPostData()
+  constructor(private postsService: PostsService, private cacheService: CacheService, private titleService: Title) {
+    titleService.setTitle(`About | ${CONSTANTS.fixedTitle}`)
+    this.getPostData()
   }
 
   async getPostData() {
