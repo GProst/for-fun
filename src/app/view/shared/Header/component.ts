@@ -29,7 +29,7 @@ export class Header {
     this.router.navigate([path])
   }
 
-  onAvatarTouch (event: any) { // TODO: TouchEvent interface
+  onAvatarTouch (event: TouchEvent) {
     event.preventDefault()
     this.tooltip.show(0)
   }

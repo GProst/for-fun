@@ -1,5 +1,8 @@
 import {Component, HostBinding} from '@angular/core'
 import {ActivatedRoute, Params} from '@angular/router'
+import {Title} from '@angular/platform-browser'
+
+import {CONSTANTS} from '../../../constants'
 
 import {slideAway} from './animations'
 
@@ -20,7 +23,11 @@ export class PostsPage {
   posts: Array<PostCardData> = []
   fetchingPosts: boolean = true
 
-  constructor(private postsService: PostsService, private cacheService: CacheService, private route: ActivatedRoute) {
+  constructor(
+    private postsService: PostsService, private cacheService: CacheService, private route: ActivatedRoute,
+    private titleService: Title
+  ) {
+    titleService.setTitle(CONSTANTS.fixedTitle)
     this.route.params
       .subscribe(async (params: Params) => {
         const {pageNumber} = params
