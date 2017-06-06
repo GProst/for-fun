@@ -2,11 +2,11 @@ export const postData = {
   title: 'Adventure time post!',
   slug: 'adventure-time',
   frontImage: {
-    src: 'https://cdn-images-1.medium.com/max/2000/1*DOh8hikbDKQbziSE-LWKJg.jpeg',
-    srcSet: 'https://cdn-images-1.medium.com/max/2000/1*DOh8hikbDKQbziSE-LWKJg.jpeg 1x',
+    src: 'http://cdn.wallpapersafari.com/10/56/eV7hrO.jpg',
+    srcSet: 'http://cdn.wallpapersafari.com/10/56/eV7hrO.jpg 1x',
     alt: 'tstFrontImage',
-    heightCoeff: 700,
-    widthCoeff: 1086
+    heightCoeff: 1200,
+    widthCoeff: 1920
   },
   mainContent: [
     {
@@ -72,48 +72,73 @@ export const postData = {
       type: <'gallery'> 'gallery',
       payload: [
         {
-          src: 'https://cdn-images-1.medium.com/max/2000/1*ucMd7l6fXggw2PZ2g1KTCg.jpeg',
-          srcSet: 'https://cdn-images-1.medium.com/max/2000/1*ucMd7l6fXggw2PZ2g1KTCg.jpeg 1x',
+          src: 'https://i.gyazo.com/e302e4ae3ba172bad429678ca53de155.jpg',
+          srcSet: 'https://i.gyazo.com/e302e4ae3ba172bad429678ca53de155.jpg 1x',
           alt: 'some text',
-          aspectRatio: {
-            heightCoeff: 683,
-            widthCoeff: 1024
+          slide: {
+            src: 'https://cdn-images-1.medium.com/max/2000/1*ucMd7l6fXggw2PZ2g1KTCg.jpeg',
+            srcSet: 'https://cdn-images-1.medium.com/max/2000/1*ucMd7l6fXggw2PZ2g1KTCg.jpeg 1x',
+            alt: 'some text',
+            aspectRatio: {
+              heightCoeff: 683,
+              widthCoeff: 1024
+            }
           }
         },
         {
-          src: 'https://cdn-images-1.medium.com/max/800/1*U57FQqHw9eCVlS26M2fxmw.jpeg',
-          srcSet: 'https://cdn-images-1.medium.com/max/800/1*U57FQqHw9eCVlS26M2fxmw.jpeg 1x',
+          src: 'https://i.gyazo.com/09d23c970885cd593ea396d8318b2ae7.jpg',
+          srcSet: 'https://i.gyazo.com/09d23c970885cd593ea396d8318b2ae7.jpg 1x',
           alt: 'some text',
-          aspectRatio: {
-            heightCoeff: 533,
-            widthCoeff: 800
+          slide: {
+            src: 'https://cdn-images-1.medium.com/max/800/1*U57FQqHw9eCVlS26M2fxmw.jpeg',
+            srcSet: 'https://cdn-images-1.medium.com/max/800/1*U57FQqHw9eCVlS26M2fxmw.jpeg 1x',
+            alt: 'some text',
+            aspectRatio: {
+              heightCoeff: 533,
+              widthCoeff: 800
+            }
           }
         },
         {
-          src: 'https://cdn-images-1.medium.com/max/800/1*Dwv24VW3sEuGBo4BqrsRQg.jpeg',
-          srcSet: 'https://cdn-images-1.medium.com/max/800/1*Dwv24VW3sEuGBo4BqrsRQg.jpeg 1x',
+          src: 'https://i.gyazo.com/40c103ca6f59a1042a961a4a61f514a5.jpg',
+          srcSet: 'https://i.gyazo.com/40c103ca6f59a1042a961a4a61f514a5.jpg 1x',
           alt: 'some text',
-          aspectRatio: {
-            heightCoeff: 535,
-            widthCoeff: 800
+          slide: {
+            src: 'https://cdn-images-1.medium.com/max/800/1*Dwv24VW3sEuGBo4BqrsRQg.jpeg',
+            srcSet: 'https://cdn-images-1.medium.com/max/800/1*Dwv24VW3sEuGBo4BqrsRQg.jpeg 1x',
+            alt: 'some text',
+            aspectRatio: {
+              heightCoeff: 535,
+              widthCoeff: 800
+            }
           }
         },
         {
-          src: 'https://cdn-images-1.medium.com/max/2000/1*Nozl2qd0SV8Uya2CEkF_mg.jpeg',
-          srcSet: 'https://cdn-images-1.medium.com/max/2000/1*Nozl2qd0SV8Uya2CEkF_mg.jpeg 1x',
+          src: 'https://i.gyazo.com/6ade805d9f86d204b097a95ec8197afd.jpg',
+          srcSet: 'https://i.gyazo.com/6ade805d9f86d204b097a95ec8197afd.jpg 1x',
           alt: 'some text',
-          aspectRatio: {
-            heightCoeff: 1333,
-            widthCoeff: 2000
+          slide: {
+            src: 'https://cdn-images-1.medium.com/max/2000/1*Nozl2qd0SV8Uya2CEkF_mg.jpeg',
+            srcSet: 'https://cdn-images-1.medium.com/max/2000/1*Nozl2qd0SV8Uya2CEkF_mg.jpeg 1x',
+            alt: 'some text',
+            aspectRatio: {
+              heightCoeff: 1333,
+              widthCoeff: 2000
+            }
           }
         },
         {
-          src: 'https://cdn-images-1.medium.com/max/800/1*7qYONdlJuS0pkUpdav-LQQ.jpeg',
-          srcSet: 'https://cdn-images-1.medium.com/max/800/1*7qYONdlJuS0pkUpdav-LQQ.jpeg 1x',
+          src: 'https://i.gyazo.com/c7fcfe97d7d8ad29d583d999683296cd.jpg',
+          srcSet: 'https://i.gyazo.com/c7fcfe97d7d8ad29d583d999683296cd.jpg 1x',
           alt: 'some text',
-          aspectRatio: {
-            heightCoeff: 533,
-            widthCoeff: 800
+          slide: {
+            src: 'https://cdn-images-1.medium.com/max/800/1*7qYONdlJuS0pkUpdav-LQQ.jpeg',
+            srcSet: 'https://cdn-images-1.medium.com/max/800/1*7qYONdlJuS0pkUpdav-LQQ.jpeg 1x',
+            alt: 'some text',
+            aspectRatio: {
+              heightCoeff: 533,
+              widthCoeff: 800
+            }
           }
         }
       ]

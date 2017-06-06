@@ -1,7 +1,7 @@
 import {Component, Input, OnChanges, OnInit, OnDestroy, ElementRef} from '@angular/core'
 
 import {ImageContent} from '../../common-bricks/Image/component'
-import {Slide} from '../../gallery-slider/GallerySlider/component'
+import {GalleryImage} from '../Gallery/component'
 
 interface FrontImage extends ImageContent {
   heightCoeff: number,
@@ -30,7 +30,7 @@ type PostParagraph = {
 }
 type PostGallery = {
   type: 'gallery',
-  payload: Array<Slide>
+  payload: Array<GalleryImage>
 }
 type PostVideo = {
   type: 'video',
