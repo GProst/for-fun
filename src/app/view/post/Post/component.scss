@@ -25,13 +25,14 @@ $text-side-padding: 3rem;
 }
 
 .title {
-  padding: 3rem $text-side-padding;
+  padding: 2rem $text-side-padding;
   color: white;
   background: $primary-dark;
   margin-bottom: 3rem;
   
   @media #{$gt-xs} {
     margin-bottom: 4rem;
+    padding: 3rem $text-side-padding;
   }
 }
 
