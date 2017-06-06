@@ -96,6 +96,8 @@ const config = {
 
     new WebpackChunkHash(),
 
+    isProd ? new webpack.HashedModuleIdsPlugin() : new webpack.NamedModulesPlugin(),
+
     new webpack.LoaderOptionsPlugin({
       options : {
         htmlLoader : {
@@ -107,8 +109,8 @@ const config = {
 
   output: {
     path: path.join(__dirname, "../dist"),
-    filename: "[name].js",
-    chunkFilename: "[name].js"
+    filename: "[name].[chunkhash].js",
+    chunkFilename: "[name].[chunkhash].js"
   }
 }
 
