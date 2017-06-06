@@ -8,7 +8,7 @@
   justify-content: space-between;
 }
 
-.img {
+.gallery-img {
   flex: 1 1 33%;
   margin-right: 0.5%;
   margin-bottom: 0.5%;
@@ -17,13 +17,17 @@
   height: 29vw;
   max-height: 20rem;
   
+  @-moz-document url-prefix() {
+    margin-bottom: 5px !important; // For FireFox: this will create NOT ISOLATED css rule, so be careful
+  }
+  
   @media #{$gt-sm} {
-    height: 18vw;
+    height: 18vw; // FixMe: fix styles when images will be square (no heights at all, they will be auto)
     max-height: 17rem;
   }
 }
 
-.img /deep/ img {
+.gallery-img /deep/ img {
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -33,6 +37,6 @@
   flex-basis: 66.5%;
 }
 
-.img:nth-child(3), .img:last-child{
+.gallery-img:nth-child(3), .gallery-img:last-child{
   margin-right: 0;
 }

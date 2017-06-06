@@ -16,7 +16,7 @@ export class Gallery {
 
   setImgClass(index: number): object {
     return {
-      img: true,
+      'gallery-img': true,
       'long-img': index === 3
     }
   }
