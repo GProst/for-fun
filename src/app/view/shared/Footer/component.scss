@@ -22,9 +22,12 @@
 .icon-link {
   display: block;
   cursor: default;
-  height: 17px;
-  width: 17px;
   margin: 0 0.3rem;
+  
+  & /deep/ .svg {
+    height: 17px;
+    width: 17px;
+  }
 }
 
 .author {
