@@ -17,6 +17,7 @@ $text-side-padding: 3rem;
   padding-bottom: 3rem;
   position: relative;
   background: white;
+  box-shadow: 0 3px 9px 0 rgba(100, 100, 100 ,0.5);
   
   @media #{$lt-sm} {
     margin-top: 0 !important;
