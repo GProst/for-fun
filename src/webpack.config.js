@@ -43,7 +43,7 @@ const config = {
       },
       {
         test: /component\.scss/,
-        use: ['raw-loader', 'sass-loader']
+        use: ['raw-loader', 'postcss-loader', 'sass-loader']
       },
       {
         test: /\.scss/,
@@ -56,6 +56,7 @@ const config = {
                 sourceMap: true
               }
             },
+            'postcss-loader',
             'sass-loader'
           ],
           fallback: 'style-loader'
