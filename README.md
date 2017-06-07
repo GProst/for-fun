@@ -1,19 +1,11 @@
-## Layout
+## Used technologies:
 
-| breakpoint | mediaQuery |
-|--------|--------|
-| xs    | 'screen and (max-width: 599px)'                         |
-| sm    | 'screen and (min-width: 600px) and (max-width: 959px)'  |
-| md    | 'screen and (min-width: 960px) and (max-width: 1279px)' |
-| lg    | 'screen and (min-width: 1280px) and (max-width: 1919px)'|
-| xl    | 'screen and (min-width: 1920px) and (max-width: 5000px)'|
-|       |                                                         |
-| lt-sm | 'screen and (max-width: 599px)'                         |
-| lt-md | 'screen and (max-width: 959px)'                         |
-| lt-lg | 'screen and (max-width: 1279px)'                        |
-| lt-xl | 'screen and (max-width: 1919px)'                        |
-|       |                                                         |
-| gt-xs | 'screen and (min-width: 600px)'                         |
-| gt-sm | 'screen and (min-width: 960px)'                         |
-| gt-md | 'screen and (min-width: 1280px)'                        |
-| gt-lg | 'screen and (min-width: 1920px)'                        |
+* [Angular 4](https://angular.io/)
+* [Typescript](https://www.typescriptlang.org/)
+* Material Design ([Angular Material 2](https://material.angular.io/))
+* [Web Animations](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API)
+* ES6 + ES7
+* [Media Queries Level 4](https://www.w3.org/TR/mediaqueries-4/)
+* [Sass](http://sass-lang.com/)
+* [Webpack](https://webpack.js.org/)
+* [TSLint](https://palantir.github.io/tslint/)
