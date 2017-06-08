@@ -9,3 +9,12 @@
 * [Sass](http://sass-lang.com/)
 * [Webpack](https://webpack.js.org/)
 * [TSLint](https://palantir.github.io/tslint/)
+
+## TODO:
+
+* Unit tests/E2E tests
+* Shadow DOM
+* Share buttons (fb, vk, twitter, g+)
+* RSS
+* Service Worker (cache control)
+
