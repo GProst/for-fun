@@ -1,8 +1,10 @@
 import {Injectable} from '@angular/core'
+import {Http, Response, RequestOptions, Headers} from '@angular/http'
+import 'rxjs/add/operator/toPromise'
 
 import {PostCardData} from '../post-list/PostCard/component'
 import {PostData} from '../post/Post/component'
-import {postCards, posts} from './fake-posts' // FixMe: fetch from backend
+import {postCards} from './fake-posts' // FixMe: fetch from backend
 
 import {CacheService} from '../../cache/cache.service'
 
@@ -10,7 +12,7 @@ type ArrayOfPostCards = Array<PostCardData>
 
 @Injectable()
 export class PostsService {
-  constructor(private cacheService: CacheService) {}
+  constructor(private cacheService: CacheService, private http: Http) {}
 
   fetchPosts(pageNumber: number): Promise<ArrayOfPostCards> {
     return new Promise((resolve) => {
@@ -20,10 +22,14 @@ export class PostsService {
   }
 
   fetchPost(slug: string): Promise<PostData> {
-    return new Promise((resolve) => {
-      const post = posts[slug]
-      this.cacheService.cachePost(post)
-      setTimeout(() => resolve(post), 1000)
-    }) // TODO: server request
+    let headers = new Headers({ 'Content-Type': 'application/json' })
+    let options = new RequestOptions({headers})
+
+    return this.http.get(`/api/post/${slug}`, options)
+      .toPromise()
+      .then((res: Response) => res.json())
+      .catch((err: Response | any) => {
+        throw err // TODO: handle error
+      })
   }
 }
