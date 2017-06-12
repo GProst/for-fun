@@ -28,8 +28,12 @@ export class PostsService {
     return this.http.get(`/api/post/${slug}`, options)
       .toPromise()
       .then((res: Response) => res.json())
+      .then((post: PostData) => {
+        this.cacheService.cachePost(post)
+        return post
+      })
       .catch((err: Response | any) => {
-        throw err // TODO: handle error
+        throw err
       })
   }
 }
