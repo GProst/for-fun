@@ -117,7 +117,12 @@ const config = {
 config.devServer = {
   port: isProd ? 8181 : 8080,
   publicPath: config.output.publicPath,
-  historyApiFallback: true
+  historyApiFallback: true,
+  proxy: {
+    '/api': {
+      target: 'http://localhost:3001'
+    }
+  }
 }
 
 if (isProd) {
