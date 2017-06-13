@@ -22,6 +22,7 @@ export class PostsPage {
 
   posts: Array<PostCardData> = []
   fetchingPosts: boolean = true
+  postsOnceLoaded: boolean = false
 
   constructor(
     private postsService: PostsService, private cacheService: CacheService, private route: ActivatedRoute,
@@ -38,5 +39,6 @@ export class PostsPage {
   async getPosts(pageNumber: number) {
     this.posts = this.cacheService.getPagePosts(pageNumber) || await this.postsService.fetchPosts(pageNumber)
     this.fetchingPosts = false
+    this.postsOnceLoaded = true
   }
 }
