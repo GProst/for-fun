@@ -1,4 +1,4 @@
 <div class="page-content">
-  <gp-loader *ngIf="fetchingPosts" [class.small-loader]="postsOnceLoaded"></gp-loader>
-  <gp-post-list *ngIf="posts && !fetchingPosts" [posts]="posts"></gp-post-list>
+  <!--<gp-loader *ngIf="!postsOnceLoaded"></gp-loader> TODO: pagination component instead-->
+  <router-outlet></router-outlet>
 </div>

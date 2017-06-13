@@ -2,10 +2,23 @@ import {NgModule} from '@angular/core'
 import {RouterModule, Routes} from '@angular/router'
 
 import {PostsPage} from './component'
+import {PostList} from '../../post-list/PostList/component'
 
 const postsPageRoutes: Routes = [
-  {path: 'posts', component: PostsPage},
-  {path: 'posts/page/:pageNumber', component: PostsPage}
+  {
+    path: 'posts',
+    component: PostsPage,
+    children: [
+      {
+        path: '',
+        component: PostList
+      },
+      {
+        path: 'page/:pageNumber',
+        component: PostList
+      }
+    ]
+  }
 ]
 
 @NgModule({

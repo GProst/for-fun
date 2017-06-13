@@ -1,8 +1,13 @@
-import {Component, Input, HostBinding} from '@angular/core'
+import {Component, HostBinding} from '@angular/core'
+import {Params, ActivatedRoute} from '@angular/router'
 
 import {slideFromLeft} from './animations'
 
 import {PostCardData} from '../PostCard/component'
+
+import {PostsService} from '../../services/posts.service'
+import {PaginationService} from '../../services/pagination.service'
+import {CacheService} from '../../../cache/cache.service'
 
 @Component({
   selector: 'gp-post-list',
@@ -13,5 +18,23 @@ import {PostCardData} from '../PostCard/component'
 export class PostList {
   @HostBinding('@enterAnimation') enterAnimation = true
 
-  @Input() posts: Array<PostCardData>
+  posts: Array<PostCardData>
+  fetchingPosts: boolean = true
+
+  constructor(
+    private postsService: PostsService, private cacheService: CacheService, private route: ActivatedRoute,
+    private paginationService: PaginationService
+  ) {
+    this.route.params
+      .subscribe(async (params: Params) => {
+        const {pageNumber} = params
+        this.getPosts(pageNumber || 1) // default is first page
+      })
+  }
+
+  async getPosts(pageNumber: number) {
+    this.posts = this.cacheService.getPagePosts(pageNumber) || await this.postsService.fetchPosts(pageNumber)
+    this.paginationService.updateCurrentPageNumber(pageNumber)
+    this.fetchingPosts = false
+  }
 }

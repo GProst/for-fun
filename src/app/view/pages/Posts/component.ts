@@ -1,5 +1,4 @@
-import {Component, HostBinding} from '@angular/core'
-import {ActivatedRoute, Params} from '@angular/router'
+import {Component, HostBinding, OnDestroy} from '@angular/core'
 import {Title} from '@angular/platform-browser'
 
 import {CONSTANTS} from '../../../constants'
@@ -8,8 +7,8 @@ import {slideAway} from './animations'
 
 import {PostCardData} from '../../post-list/PostCard/component'
 
-import {PostsService} from '../../services/posts.service'
-import {CacheService} from '../../../cache/cache.service'
+import {PaginationService} from '../../services/pagination.service'
+import {Subscription} from 'rxjs/Subscription'
 
 @Component({
   selector: 'gp-posts-page',
@@ -17,28 +16,29 @@ import {CacheService} from '../../../cache/cache.service'
   styleUrls: ['./component.scss'],
   animations: [slideAway]
 })
-export class PostsPage {
+export class PostsPage implements OnDestroy {
   @HostBinding('@routeAnimation') routeAnimation = true
 
+  private pageNumberSubscription: Subscription
   posts: Array<PostCardData> = []
-  fetchingPosts: boolean = true
   postsOnceLoaded: boolean = false
+  pageNumber: number
 
   constructor(
-    private postsService: PostsService, private cacheService: CacheService, private route: ActivatedRoute,
-    private titleService: Title
+    private paginationService: PaginationService, private titleService: Title
   ) {
     titleService.setTitle(CONSTANTS.fixedTitle)
-    this.route.params
-      .subscribe(async (params: Params) => {
-        const {pageNumber} = params
-        this.getPosts(pageNumber || 1) // default is first page
-      })
+    this.pageNumberSubscription = paginationService.currentPageUpdates$.subscribe(this.showContent) // TODO: try move
+    // TODO: it to paginationComponent
   }
 
-  async getPosts(pageNumber: number) {
-    this.posts = this.cacheService.getPagePosts(pageNumber) || await this.postsService.fetchPosts(pageNumber)
-    this.fetchingPosts = false
+  showContent = (pageNumber: number) => {
+    this.pageNumberSubscription.unsubscribe()
+    this.pageNumber = pageNumber
     this.postsOnceLoaded = true
+  }
+
+  ngOnDestroy() {
+    this.pageNumberSubscription.unsubscribe()
   }
 }
