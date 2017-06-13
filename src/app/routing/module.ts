@@ -4,7 +4,14 @@ import {RouterModule, Routes} from '@angular/router'
 import {RoutingService} from './routing.service'
 
 const appRoutes: Routes = [
-  {path: '**', redirectTo: '/posts', pathMatch: 'full'}
+  {
+    path: '**',
+    redirectTo: '/posts',
+    pathMatch: 'full',
+    data: {
+      animation: 'posts'
+    }
+  }
 ]
 
 @NgModule({

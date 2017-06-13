@@ -4,7 +4,13 @@ import {RouterModule, Routes} from '@angular/router'
 import {PostPage} from './component'
 
 const postPageRoutes: Routes = [
-  {path: 'posts/:slug', component: PostPage},
+  {
+    path: 'posts/:slug',
+    component: PostPage,
+    data: {
+      animation: 'post'
+    }
+  },
 ]
 
 @NgModule({

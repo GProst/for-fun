@@ -5,7 +5,7 @@ import {MdToolbarModule, MdButtonModule, MdTooltipModule} from '@angular/materia
 import './index.scss'
 
 @NgModule({
-  exports:  [BrowserAnimationsModule, MdToolbarModule, MdButtonModule, MdTooltipModule],
+  exports:  [MdToolbarModule, MdButtonModule, MdTooltipModule],
   imports:  [BrowserAnimationsModule, MdToolbarModule, MdButtonModule, MdTooltipModule]
 })
 export class AngularMaterialModule {}

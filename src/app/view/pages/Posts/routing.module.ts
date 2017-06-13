@@ -8,14 +8,23 @@ const postsPageRoutes: Routes = [
   {
     path: 'posts',
     component: PostsPage,
+    data: {
+      animation: 'posts'
+    },
     children: [
       {
         path: '',
-        component: PostList
+        component: PostList,
+        data: {
+          animation: 'posts'
+        }
       },
       {
         path: 'page/:pageNumber',
-        component: PostList
+        component: PostList,
+        data: {
+          animation: 'posts'
+        }
       }
     ]
   }
