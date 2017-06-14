@@ -1,24 +1,22 @@
-import {Component, HostBinding, OnDestroy} from '@angular/core'
+import {Component, OnDestroy} from '@angular/core'
 import {Title} from '@angular/platform-browser'
+import {Subscription} from 'rxjs/Subscription'
 
 import {CONSTANTS} from '../../../constants'
-
-import {slideAway} from './animations'
 
 import {PostCardData} from '../../post-list/PostCard/component'
 
 import {PaginationService} from '../../services/pagination.service'
-import {Subscription} from 'rxjs/Subscription'
+
+import {slideFromTo} from './animations'
 
 @Component({
   selector: 'gp-posts-page',
   templateUrl: './component.html',
   styleUrls: ['./component.scss'],
-  animations: [slideAway]
+  animations: [slideFromTo]
 })
 export class PostsPage implements OnDestroy {
-  @HostBinding('@routeAnimation') routeAnimation = true
-
   private pageNumberSubscription: Subscription
   posts: Array<PostCardData> = []
   postsOnceLoaded: boolean = false
@@ -30,6 +28,11 @@ export class PostsPage implements OnDestroy {
     titleService.setTitle(CONSTANTS.fixedTitle)
     this.pageNumberSubscription = paginationService.currentPageUpdates$.subscribe(this.showContent) // TODO: try move
     // TODO: it to paginationComponent
+  }
+
+  prepRouteState(outlet: any) {
+    console.log('inner outlet', outlet.activatedRouteData.animation)
+    return outlet.activatedRouteData.animation || 'posts' // TODO: try remove || part
   }
 
   showContent = (pageNumber: number) => {

@@ -1,6 +1,6 @@
 <gp-header></gp-header>
-<main class="main">
-  <router-outlet></router-outlet>
+<main class="main" [@routeAnimation]="prepRouteState(routerOutlet)">
+  <router-outlet #routerOutlet="outlet"></router-outlet>
 </main>
 <gp-footer></gp-footer>
 <gp-gallery-slider-container></gp-gallery-slider-container>

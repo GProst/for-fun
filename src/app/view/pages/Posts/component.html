@@ -1,4 +1,6 @@
 <div class="page-content">
   <!--<gp-loader *ngIf="!postsOnceLoaded"></gp-loader> TODO: pagination component instead-->
-  <router-outlet></router-outlet>
+  <div [@routeAnimation]="prepRouteState(routerOutlet)">
+    <router-outlet #routerOutlet="outlet"></router-outlet>
+  </div>
 </div>
