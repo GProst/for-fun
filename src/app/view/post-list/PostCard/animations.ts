@@ -11,9 +11,16 @@ export const slideFromLeft: AnimationEntryMetadata =
     ),
     transition(':enter', [
       style({
+        position: 'relative',
         opacity: 0,
         transform: 'translateX(-300%)'
       }),
       animate('0.3s 0.2s ease-in')
+    ]),
+    transition(':leave', [
+      animate('0.3s 0.2s ease-in', style({
+        opacity: 0,
+        transform: 'translateX(300%)'
+      }))
     ])
   ])

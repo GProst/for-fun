@@ -1,38 +1,30 @@
-import {Component, Input, OnChanges, HostListener} from '@angular/core'
-import {Router} from '@angular/router'
-
-import {ImageContent} from '../../common-bricks/Image/component'
-
-export interface PostCardData {
-  thumbnail: ImageContent,
-  title: string,
-  description: string,
-  slug: string
-}
+import {Component, Output, EventEmitter} from '@angular/core'
+import {ActivatedRoute, Params, Router} from '@angular/router'
 
 @Component({
-  selector: 'gp-post-card',
+  selector: 'gp-pagination',
   templateUrl: './component.html',
   styleUrls: ['./component.scss']
 })
-export class PostCard implements OnChanges {
-  @Input() content: PostCardData
+export class Pagination {
+  @Output() change = new EventEmitter<'next' | 'prev'>()
 
-  thumbnail: ImageContent
-  title: string
-  description: string
-  slug: string
+  pageNumber: number
 
-  constructor(private router: Router) {}
-
-  @HostListener('click') onPostCardClick() {
-    this.router.navigate(['/posts', this.slug])
+  constructor(private router: Router, private route: ActivatedRoute) {
+    this.route.params
+      .subscribe(async (params: Params) => {
+        this.pageNumber = params.pageNumber || 1
+      })
   }
 
-  ngOnChanges() {
-    this.thumbnail = this.content.thumbnail
-    this.title = this.content.title
-    this.description = this.content.description
-    this.slug = this.content.slug
+  onPrevButtonClick() {
+    this.change.emit('prev')
+    this.router.navigate([`/posts/page/${--this.pageNumber}`])
+  }
+
+  onNextButtonClick() {
+    this.change.emit('next')
+    this.router.navigate([`/posts/page/${++this.pageNumber}`])
   }
 }
