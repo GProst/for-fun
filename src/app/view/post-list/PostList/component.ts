@@ -16,7 +16,7 @@ import {CacheService} from '../../../cache/cache.service'
   animations: [slideFromLeft]
 })
 export class PostList {
-  @HostBinding('@enterAnimation') enterAnimation = true
+  @HostBinding('@postListAnimation') postListAnimation = true
 
   posts: Array<PostCardData>
   fetchingPosts: boolean = true

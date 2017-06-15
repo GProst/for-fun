@@ -17,7 +17,7 @@ import {pageAnimation} from '../Post/post-page.animations'
   animations: [pageAnimation]
 })
 export class AboutPage {
-  @HostBinding('@pageAnimation') pageAnimation: boolean | string = true
+  @HostBinding('@postPageAnimation') pageAnimation: boolean | string = true
 
   postData: PostData
   loading: boolean = false

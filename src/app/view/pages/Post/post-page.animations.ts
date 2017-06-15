@@ -2,7 +2,7 @@ import {AnimationEntryMetadata} from '@angular/core'
 import {animateChild, query, transition, trigger} from '@angular/animations'
 
 export const pageAnimation: AnimationEntryMetadata =
-  trigger('pageAnimation', [
+  trigger('postPageAnimation', [
     transition(':enter', [
       query('@*', [animateChild()], {optional: true})
     ]),

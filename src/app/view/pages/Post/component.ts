@@ -20,7 +20,7 @@ import {pageAnimation} from './post-page.animations'
   animations: [pageAnimation]
 })
 export class PostPage implements OnDestroy {
-  @HostBinding('@pageAnimation') pageAnimation: boolean | string = true
+  @HostBinding('@postPageAnimation') pageAnimation: boolean | string = true
 
   postData: PostData
   loading: boolean = false

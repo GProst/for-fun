@@ -2,7 +2,7 @@ import {AnimationEntryMetadata} from '@angular/core'
 import {animate, state, style, transition, trigger} from '@angular/animations'
 
 export const slideFromLeft: AnimationEntryMetadata =
-  trigger('enterAnimation', [
+  trigger('postListAnimation', [
     state('*',
       style({
         opacity: 1,

@@ -7,7 +7,7 @@ export const slideAway: AnimationEntryMetadata =
       group([
         query(':leave', [
           group([
-            query(':leave', [ // override nested route (PostList) animation (nested route should stay still)
+            query('@postListAnimation', [ // override nested route animation (nested route should stay still)
               animate('0.5s', style({
                 opacity: 1,
                 transform: 'translateX(0)'
@@ -25,7 +25,7 @@ export const slideAway: AnimationEntryMetadata =
             ])
           ]),
         ], {optional: true, limit: 1 /* getting only root container (/posts page) */}),
-        query('@pageAnimation', [animateChild({delay: 300})]), // entering page animations
+        query('@postPageAnimation', [animateChild({delay: 300})]), // entering postPage animations
       ])
     ]),
     transition('post => posts', [
