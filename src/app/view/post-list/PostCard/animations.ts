@@ -12,7 +12,7 @@ export const slideFromLeft: AnimationEntryMetadata =
     transition(':enter', [
       style({
         opacity: 0,
-        transform: 'translateX(-100%)'
+        transform: 'translateX(-300%)'
       }),
       animate('0.3s 0.2s ease-in')
     ])
