@@ -24,8 +24,8 @@ export const slideAway: AnimationEntryMetadata =
               }))
             ])
           ]),
-        ], {optional: true, limit: 1 /* getting only root container (Posts page) */}),
-        query('@pageAnimation', [animateChild({delay: 300})]),
+        ], {optional: true, limit: 1 /* getting only root container (/posts page) */}),
+        query('@pageAnimation', [animateChild({delay: 300})]), // entering page animations
       ])
     ]),
     transition('post => posts', [
@@ -35,14 +35,14 @@ export const slideAway: AnimationEntryMetadata =
           top: 0,
         }),
         group([
-          query('@enterAnimation', [animateChild()]),
+          query('@postContainerAnimation', [animateChild()]), // stay still (not move)
           animate('0.5s ease-in-out', style({
             opacity: 0,
             transform: 'translateX(100%)'
           }))
         ]),
-      ], {limit: 1}),
-      query('@*', [animateChild({delay: -300})]), // after :leave animate all elements in /posts page
+      ], {limit: 1  /* getting only root container (/post page) */}),
+      query('@*', [animateChild({delay: -300})]), // entering page animations FixMe: pageAnimation
     ])
     // TODO: post => post
   ])

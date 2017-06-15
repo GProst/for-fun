@@ -6,8 +6,8 @@ export const pageAnimation: AnimationEntryMetadata =
     transition(':enter', [
       query('@*', [animateChild()], {optional: true})
     ]),
-    transition('* => posts-loaded', [
+    transition('* => post-loaded', [
       query(':leave', [animateChild()], {optional: true}),
-      query(':enter', [animateChild({delay: 200})], {optional: true})
+      query(':enter', [animateChild({delay: 400})], {optional: true})
     ])
   ])

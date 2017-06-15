@@ -8,7 +8,7 @@ import {PostData} from '../../post/Post/component'
 import {PostsService} from '../../services/posts.service'
 import {CacheService} from '../../../cache/cache.service'
 
-import {pageAnimation} from './animations'
+import {pageAnimation} from '../Post/post-page.animations'
 
 @Component({
   selector: 'gp-about-page',
@@ -33,7 +33,7 @@ export class AboutPage {
     }, 300)
     this.postData = this.cacheService.getPost('about') || await this.postsService.fetchPost('about')
     clearTimeout(longRequest)
-    this.pageAnimation = 'posts-loaded'
+    this.pageAnimation = 'post-loaded'
     this.loading = false
   }
 }

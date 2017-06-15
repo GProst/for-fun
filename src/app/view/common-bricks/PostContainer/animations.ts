@@ -2,7 +2,7 @@ import {AnimationEntryMetadata} from '@angular/core'
 import {animate, state, style, transition, trigger} from '@angular/animations'
 
 export const slideFrom: AnimationEntryMetadata =
-  trigger('enterAnimation', [
+  trigger('postContainerAnimation', [
     state('*',
       style({
         opacity: 1,
@@ -24,5 +24,5 @@ export const slideFrom: AnimationEntryMetadata =
       }),
       animate('0.3s 0.2s ease-in')
     ]),
-    transition(':leave', [animate('0.3s')]),
+    transition(':leave', [animate('0.3s')]), // stay still when we leaving the page
   ])

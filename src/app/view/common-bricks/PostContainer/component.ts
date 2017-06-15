@@ -11,7 +11,7 @@ import {slideFrom} from './animations'
   animations: [slideFrom]
 })
 export class PostContainer {
-  @HostBinding('@enterAnimation') enterAnimation = 'from-left'
+  @HostBinding('@postContainerAnimation') postContainerAnimation = 'from-left'
 
   private prevRouteWasPostList(url: string) {
     return url && (url === '/posts' || url.includes('page'))
@@ -19,7 +19,7 @@ export class PostContainer {
 
   constructor(private routingService: RoutingService) {
     if (this.prevRouteWasPostList(routingService.prevRouteUrl)) {
-      this.enterAnimation = 'from-right'
+      this.postContainerAnimation = 'from-right'
     }
   }
 }
