@@ -1,4 +1,5 @@
-import { animate, AnimationEntryMetadata, state, style, transition, trigger } from '@angular/core'
+import {AnimationEntryMetadata} from '@angular/core'
+import { animate, state, style, transition, trigger } from '@angular/core'
 
 export const slideFromLeft: AnimationEntryMetadata =
   trigger('enterAnimation', [
