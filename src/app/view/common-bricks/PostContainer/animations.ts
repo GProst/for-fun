@@ -6,7 +6,8 @@ export const slideFrom: AnimationEntryMetadata =
     state('*',
       style({
         opacity: 1,
-        transform: 'translateX(0)'
+        transform: 'translateX(0)',
+        display: 'block' // FixMe: something causes display: none if this not set -> figure out what
       })
     ),
     transition('void => from-right', [
@@ -22,5 +23,6 @@ export const slideFrom: AnimationEntryMetadata =
         transform: 'translateX(-100%)'
       }),
       animate('0.3s 0.2s ease-in')
-    ])
+    ]),
+    transition(':leave', [animate('0.3s')]),
   ])

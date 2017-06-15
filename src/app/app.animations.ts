@@ -25,9 +25,7 @@ export const slideAway: AnimationEntryMetadata =
             ])
           ]),
         ], {optional: true, limit: 1 /* getting only root container (Posts page) */}),
-        // FixMe: animations interrupt immediately when Loader is hidden
-        // FixMe: I will try to create one common comp with child queries for Loader and pageContainer
-        query('@*', [animateChild({delay: 300})]),
+        query('@pageAnimation', [animateChild({delay: 300})]),
       ])
     ]),
     transition('post => posts', [
@@ -36,11 +34,14 @@ export const slideAway: AnimationEntryMetadata =
           position: 'absolute',
           top: 0,
         }),
-        animate('0.5s ease-in-out', style({
-          opacity: 0,
-          transform: 'translateX(100%)'
-        }))
-      ]),
+        group([
+          query('@enterAnimation', [animateChild()]),
+          animate('0.5s ease-in-out', style({
+            opacity: 0,
+            transform: 'translateX(100%)'
+          }))
+        ]),
+      ], {limit: 1}),
       query('@*', [animateChild({delay: -300})]), // after :leave animate all elements in /posts page
     ])
     // TODO: post => post
