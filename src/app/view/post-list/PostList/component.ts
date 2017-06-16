@@ -1,7 +1,5 @@
-import {Component, HostBinding} from '@angular/core'
+import {Component} from '@angular/core'
 import {Params, ActivatedRoute} from '@angular/router'
-
-import {slideFromLeft} from './animations'
 
 import {PostCardData} from '../PostCard/component'
 
@@ -12,12 +10,9 @@ import {CacheService} from '../../../cache/cache.service'
 @Component({
   selector: 'gp-post-list',
   templateUrl: './component.html',
-  styleUrls: ['./component.scss'],
-  animations: [slideFromLeft]
+  styleUrls: ['./component.scss']
 })
 export class PostList {
-  @HostBinding('@postListAnimation') postListAnimation = true
-
   posts: Array<PostCardData>
   fetchingPosts: boolean = true
 

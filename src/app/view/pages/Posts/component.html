@@ -1,6 +1,6 @@
 <div class="page-content">
   <!--<gp-loader *ngIf="!postsOnceLoaded"></gp-loader> TODO: pagination component instead-->
-  <div [@routeAnimation]="prepRouteState(routerOutlet)">
+  <div class="post-list-container" [@nestedPostsRouteAnimation]="prepRouteState(routerOutlet)" (@nestedPostsRouteAnimation.done)="onAnimationEnd($event)">
     <router-outlet #routerOutlet="outlet"></router-outlet>
   </div>
 </div>

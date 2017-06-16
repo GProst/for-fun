@@ -8,13 +8,13 @@ import {PostCardData} from '../../post-list/PostCard/component'
 
 import {PaginationService} from '../../services/pagination.service'
 
-import {slideFromTo} from './animations'
+import {routeAnimation} from './animations'
 
 @Component({
   selector: 'gp-posts-page',
   templateUrl: './component.html',
   styleUrls: ['./component.scss'],
-  animations: [slideFromTo]
+  animations: [routeAnimation]
 })
 export class PostsPage implements OnDestroy {
   private pageNumberSubscription: Subscription
@@ -31,8 +31,11 @@ export class PostsPage implements OnDestroy {
   }
 
   prepRouteState(outlet: any) {
+    console.log('inner outlet obj', outlet)
     console.log('inner outlet', outlet.activatedRouteData.animation)
-    return outlet.activatedRouteData.animation || 'posts' // TODO: try remove || part
+    let {pageNumber} = outlet.activatedRoute.params.value // FixMe: page number instead
+    console.log('pageNum', pageNumber)
+    return `posts${pageNumber}`
   }
 
   showContent = (pageNumber: number) => {
