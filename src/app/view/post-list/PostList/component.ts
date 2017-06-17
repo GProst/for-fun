@@ -1,8 +1,8 @@
 import {Component, Input, HostBinding} from '@angular/core'
 
-import {slideFromLeft} from './animations'
-
 import {PostCardData} from '../PostCard/component'
+
+import {slideFromLeft} from './animations'
 
 @Component({
   selector: 'gp-post-list',

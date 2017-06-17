@@ -69,7 +69,7 @@
     "style-loader": "^0.17.0",
     "tslint": "^3.15.1",
     "tslint-eslint-rules": "^4.0.0",
-    "typescript": "^2.3.2",
+    "typescript": "^2.3.4",
     "webpack": "^2.4.1",
     "webpack-chunk-hash": "^0.4.0",
     "webpack-dev-server": "^2.4.5"
