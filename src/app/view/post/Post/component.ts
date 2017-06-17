@@ -4,8 +4,8 @@ import {ImageContent} from '../../common-bricks/Image/component'
 import {GalleryImage} from '../Gallery/component'
 
 interface FrontImage extends ImageContent {
-  heightCoeff: number,
-  widthCoeff: number
+  height: number,
+  width: number
 }
 
 export interface PostData {
@@ -85,7 +85,7 @@ export class Post implements OnChanges, OnInit, OnDestroy {
     this.frontImage = this.postData.frontImage
     this.mainContent = this.postData.mainContent
 
-    this.frontImageAspectRatio = this.frontImage.heightCoeff / this.frontImage.widthCoeff
+    this.frontImageAspectRatio = this.frontImage.height / this.frontImage.width
     this.setArticlePosition()
     window.addEventListener('resize', this.setArticlePosition)
   }

@@ -5,10 +5,8 @@ import {BreakpointsService} from '../../services/breakpoints.service'
 import {ImageContent} from '../../common-bricks/Image/component'
 
 export interface Slide extends ImageContent {
-  aspectRatio: {
-    heightCoeff: number,
-    widthCoeff: number
-  }
+  height: number,
+  width: number
 }
 
 export type SliderData = {
@@ -43,8 +41,8 @@ export class GallerySlider implements OnChanges, OnInit, OnDestroy {
 
   private setCurrentSlideType() {
     if (!this.isGTSM()) {
-      const {heightCoeff, widthCoeff} = this.slides[this.currentSlide].aspectRatio
-      const slideAspectRatio = heightCoeff / widthCoeff
+      const {height, width} = this.slides[this.currentSlide]
+      const slideAspectRatio = height / width
       const viewportAspectRatio = window.innerHeight / window.innerWidth
       let proportions = 'tall'
       if (slideAspectRatio < viewportAspectRatio) {
@@ -63,9 +61,9 @@ export class GallerySlider implements OnChanges, OnInit, OnDestroy {
         sizes = '100vw'
       // if slide height will be 100vh (tall)
       } else {
-        const {heightCoeff, widthCoeff} = this.slides[this.currentSlide].aspectRatio
-        const slideViewportHightsCoeff = window.innerHeight / heightCoeff
-        const slideWidth = widthCoeff * slideViewportHightsCoeff
+        const {height, width} = this.slides[this.currentSlide]
+        const slideViewportHightsCoeff = window.innerHeight / height
+        const slideWidth = width * slideViewportHightsCoeff
         const slideWidthPercentage = Math.round(100 * (slideWidth / window.innerWidth)) // integer
         sizes = `${slideWidthPercentage}vw`
       }
