@@ -1,5 +1,6 @@
 <div class="page-content">
-  <gp-loader *ngIf="fetchingPosts" class="loader"></gp-loader>
-  <gp-post-list *ngIf="posts && !fetchingPosts" [posts]="posts"></gp-post-list>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
   <!--<gp-pagination (change)="onPageChange($event)"></gp-pagination> TODO: uncomment-->
 </div>

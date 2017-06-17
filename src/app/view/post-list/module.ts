@@ -4,12 +4,13 @@ import {BrowserModule} from '@angular/platform-browser'
 import {CommonBricksModule} from '../common-bricks/module'
 import {AngularMaterialModule} from '../third-party/angular-material/module'
 import {PostList} from './PostList/component'
+import {PostListContainer} from './PostListContainer/component'
 import {PostCard} from './PostCard/component'
 import {Pagination} from './Pagination/component'
 
 @NgModule({
-  declarations: [PostList, PostCard, Pagination],
+  declarations: [PostList, PostListContainer, PostCard, Pagination],
   imports: [BrowserModule, AngularMaterialModule, CommonBricksModule],
-  exports: [PostList, Pagination]
+  exports: [Pagination]
 })
 export class PostListModule {}

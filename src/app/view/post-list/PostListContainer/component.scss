@@ -1,0 +1,19 @@
+@import '../../../sass-vars/header';
+@import '../../../sass-vars/footer';
+@import '../../../sass-vars/breakpoints';
+@import '../../../sass-vars/page-container';
+
+:host {
+  display: block;
+  width: 80vw;
+  margin: 0 auto;
+  min-width: 300px;
+  max-width: 400px;
+  
+  @media #{$gt-xs} {
+    width: auto;
+    min-width: unset;
+    max-width: unset;
+    margin: initial;
+  }
+}
